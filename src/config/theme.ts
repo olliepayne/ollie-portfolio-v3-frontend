@@ -25,6 +25,11 @@ export const theme: Theme = {
     paragraph: {}
   },
   layout: {},
+  buttons: {
+    resetStyles: {
+      p: 0,
+    }
+  },
   styles: {
     root: {
       "*": {
