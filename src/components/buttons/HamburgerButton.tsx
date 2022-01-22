@@ -1,39 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { ThemeUICSSObject, Button } from "theme-ui"
 
-// Styles
-const barStyles: ThemeUICSSObject = {
-  width: "100%",
-  height: "2px",
-  my: "4px",
-  display: "inline-block",
-  bg: "black",
-  opacity: 1,
-  transform: "rotateZ(0deg)",
-  transition: "all 0.2s ease-out"
-}
-
-const activeTopBarStyles: ThemeUICSSObject = {
-  ...barStyles,
-  // width: "50%",
-  transformOrigin: "top left",
-  transform: "rotateZ(45deg)",
-  transition: "all 0.2s ease-out"
-}
-
-const activeMiddleBarStyles: ThemeUICSSObject = {
-  width: "0px",
-  opacity: 0
-}
-
-const activeBottomBarStyles: ThemeUICSSObject = {
-  ...barStyles,
-  // width: "50%",
-  transformOrigin: "top left",
-  transform: "rotateZ(-45deg)",
-  transition: "all 0.2s ease-out"
-}
-
 // Props
 export interface IHamburgerButton {
   className?: string
@@ -46,20 +13,47 @@ const HamburgerButton = ({
   activeState,
   handleActiveState
 }: IHamburgerButton) => {
+  const spanStyles: ThemeUICSSObject = {
+    width: "32px",
+    height: "32px",
+    verticalAlign: "middle",
+    display: "inline-flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    ".top, .middle, .bottom": {
+      width: "100%",
+      height: "2px",
+      my: 1,
+      opacity: 1,
+      bg: "black",
+      display: "inline-block",
+      transition: "all 0.2s ease-out"
+    }
+  }
+
+  const spanActiveStyles: ThemeUICSSObject = {
+    ...spanStyles,
+    ".top": {
+      transformOrigin: "top left",
+      transform: "rotateZ(45deg)"
+    },
+    ".middle": {
+      width: 0,
+      opacity: 0
+    },
+    ".bottom": {
+      transformOrigin: "top left",
+      transform: "rotateZ(-45deg)"
+    }
+  }
+
   return (
     <Button onClick={handleActiveState} variant="resetStyles">
-      <span
-        sx={{
-          width: "32px",
-          height: "32px",
-          display: "inline-flex",
-          flexDirection: "column",
-          alignItems: "center"
-        }}
-      >
-        <span sx={activeState ? activeTopBarStyles : barStyles}></span>
-        <span sx={activeState ? activeMiddleBarStyles : barStyles}></span>
-        <span sx={activeState ? activeBottomBarStyles : barStyles}></span>
+      <span sx={activeState ? spanActiveStyles : spanStyles}>
+        <span className="top" />
+        <span className="middle" />
+        <span className="bottom" />
       </span>
     </Button>
   )

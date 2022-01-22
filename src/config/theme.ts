@@ -1,15 +1,16 @@
 import { Theme } from "theme-ui"
 
 const theme: Theme = {
-  breakpoints: ["768px"],
+  breakpoints: ["992px"],
   sizes: {},
   space: {
-    0: "0.25rem", // 4px
-    1: "0.5rem", // 8px
-    2: "1rem", // 16px
-    3: "2rem", // 32px
-    4: "4rem", // 64px
-    5: "8rem" // 128px
+    0: 0, // 0px
+    1: "0.25rem", // 4px
+    2: "0.5rem", // 8px
+    3: "1rem", // 16px
+    4: "2rem", // 32px
+    5: "4rem", // 64px
+    6: "8rem" // 128px
   },
   fonts: {
     primary: "Roboto"
@@ -19,34 +20,38 @@ const theme: Theme = {
       h1: {}
     },
     desktop: {
-      h1: {},
-      h2: {},
-      h3: {},
-      h4: {},
-      h5: {},
-      paragraph: {},
-      text: {},
-      link: {}
+      h1: "4.209rem", // 67.34px
+      h2: "3.157rem", // 50.52px
+      h3: "2.369rem", // 37.90px
+      h4: "1.777rem", // 28.43px
+      h5: "1.333rem", // 21.33px
+      paragraph: "1rem", // 16px
+      text: "1rem", // 16px
+      link: "1rem" // 16px
     }
   },
   text: {
     default: {},
-    heading: {},
-    paragraph: {}
+    heading: {
+      fontFamily: "primary"
+    },
+    paragraph: {
+      fontFamily: "primary"
+    }
   },
   layout: {
     container: {
       maxWidth: 1200,
-      px: 2
+      px: 3
     },
     small: {
       maxWidth: 600,
-      px: 2
+      px: 3
     },
     medium: {
       maxWidth: 800,
-      px: 2
-    }
+      px: 3
+    },
   },
   buttons: {
     resetStyles: {

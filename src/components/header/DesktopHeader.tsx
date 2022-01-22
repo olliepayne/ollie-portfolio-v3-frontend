@@ -16,7 +16,7 @@ const DesktopHeader = () => {
           justifyContent: "space-between"
         }}
       >
-        <DesktopNav />
+        {/* <DesktopNav /> */}
         <HamburgerButton activeState={state} handleActiveState={handleState} />
       </Flex>
     </Container>
