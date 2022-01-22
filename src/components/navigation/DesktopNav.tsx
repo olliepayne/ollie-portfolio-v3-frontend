@@ -16,10 +16,14 @@ const DesktopNav = () => {
         <Link href="/">
           <a
             sx={{
-              variant: "links.resetStyles"
+              textDecoration: "none",
+              fontFamily: "primary",
+              fontSize: "2.369rem",
+              fontWeight: 500,
+              cursor: "pointer"
             }}
           >
-            <Heading>Ollie Payne</Heading>
+            Ollie Payne
           </a>
         </Link>
         <Flex
@@ -38,10 +42,7 @@ const DesktopNav = () => {
               <Link href={url}>
                 <a
                   sx={{
-                    fontFamily: "primary",
-                    fontSize: "desktop.link",
-                    fontWeight: 500,
-                    cursor: "pointer"
+                    variant: "links.underlineOut"
                   }}
                 >
                   {text}

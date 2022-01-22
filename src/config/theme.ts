@@ -65,6 +65,31 @@ const theme: Theme = {
     resetStyles: {
       textDecoration: "none",
       cursor: "pointer"
+    },
+    underlineOut: {
+      fontFamily: "primary",
+      fontSize: ["desktop.link"],
+      fontWeight: 500,
+      cursor: "pointer",
+      position: "relative",
+      "::after": {
+        content: `""`,
+        width: 0,
+        height: "2px",
+        borderRadius: "32px",
+        position: "absolute",
+        left: "50%",
+        transform: "translateX(-50%)",
+        bottom: 0,
+        bg: "black",
+        transition: "all 0.15s ease-in"
+      },
+      ":hover": {
+        "::after": {
+          width: "100%",
+          transition: "all 0.15s ease-in"
+        }
+      }
     }
   },
   styles: {
@@ -77,7 +102,10 @@ const theme: Theme = {
         m: 0
       }
     },
-    h1: {}
+    h1: {
+      variant: "text.heading",
+      fontSize: ["mobile.h1", "desktop.h1"]
+    }
   }
 }
 
