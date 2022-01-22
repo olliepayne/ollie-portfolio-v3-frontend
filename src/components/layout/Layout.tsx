@@ -3,7 +3,8 @@ import { ReactNode } from "react"
 
 import Header from "components/header/Header"
 
-interface ILayout {
+// Props
+export interface ILayout {
   children?: ReactNode | ReactNode[]
 }
 

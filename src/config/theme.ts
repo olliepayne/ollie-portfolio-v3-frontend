@@ -1,6 +1,6 @@
 import { Theme } from "theme-ui"
 
-export const theme: Theme = {
+const theme: Theme = {
   breakpoints: ["768px"],
   sizes: {},
   space: {
@@ -28,6 +28,9 @@ export const theme: Theme = {
   buttons: {
     resetStyles: {
       p: 0,
+      bg: "transparent",
+      borderRadius: 0,
+      cursor: "pointer"
     }
   },
   styles: {
@@ -43,3 +46,5 @@ export const theme: Theme = {
     h1: {}
   }
 }
+
+export default theme

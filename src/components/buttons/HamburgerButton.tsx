@@ -15,7 +15,7 @@ const barStyles: ThemeUICSSObject = {
 
 const activeTopBarStyles: ThemeUICSSObject = {
   ...barStyles,
-  transform: "rotateZ(90deg)",
+  transform: "rotateZ(45deg)",
   transition: "all 0.2s ease-out"
 }
 
@@ -26,7 +26,7 @@ const activeMiddleBarStyles: ThemeUICSSObject = {
 
 const activeBottomBarStyles: ThemeUICSSObject = {
   ...barStyles,
-  transform: "rotateZ(-90deg)",
+  transform: "rotateZ(-45deg)",
   transition: "all 0.2s ease-out"
 }
 

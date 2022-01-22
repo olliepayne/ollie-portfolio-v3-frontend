@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Box, Heading } from "theme-ui"
+import { Flex, Heading } from "theme-ui"
 import { useState } from "react"
 
 import DesktopNav from "components/navigation/DesktopNav"
@@ -10,10 +10,14 @@ const DesktopHeader = () => {
   const handleState = () => setState(!state)
 
   return (
-    <Box>
+    <Flex
+      sx={{
+        justifyContent: "space-between"
+      }}
+    >
       <DesktopNav />
       <HamburgerButton activeState={state} handleActiveState={handleState} />
-    </Box>
+    </Flex>
   )
 }
 

@@ -1,3 +1,5 @@
+/** @jsxImportSource theme-ui */
+
 import { NextPage } from "next"
 
 const Homepage: NextPage = () => {
