@@ -15,6 +15,8 @@ const barStyles: ThemeUICSSObject = {
 
 const activeTopBarStyles: ThemeUICSSObject = {
   ...barStyles,
+  // width: "50%",
+  transformOrigin: "top left",
   transform: "rotateZ(45deg)",
   transition: "all 0.2s ease-out"
 }
@@ -26,6 +28,8 @@ const activeMiddleBarStyles: ThemeUICSSObject = {
 
 const activeBottomBarStyles: ThemeUICSSObject = {
   ...barStyles,
+  // width: "50%",
+  transformOrigin: "top left",
   transform: "rotateZ(-45deg)",
   transition: "all 0.2s ease-out"
 }
@@ -43,18 +47,20 @@ const HamburgerButton = ({
   handleActiveState
 }: IHamburgerButton) => {
   return (
-    <Button
-      onClick={handleActiveState}
-      variant="resetStyles"
-      sx={{
-        width: "32px",
-        display: "inline-flex",
-        flexDirection: "column"
-      }}
-    >
-      <span sx={activeState ? activeTopBarStyles : barStyles}></span>
-      <span sx={activeState ? activeMiddleBarStyles : barStyles}></span>
-      <span sx={activeState ? activeBottomBarStyles : barStyles}></span>
+    <Button onClick={handleActiveState} variant="resetStyles">
+      <span
+        sx={{
+          width: "32px",
+          height: "32px",
+          display: "inline-flex",
+          flexDirection: "column",
+          alignItems: "center"
+        }}
+      >
+        <span sx={activeState ? activeTopBarStyles : barStyles}></span>
+        <span sx={activeState ? activeMiddleBarStyles : barStyles}></span>
+        <span sx={activeState ? activeBottomBarStyles : barStyles}></span>
+      </span>
     </Button>
   )
 }

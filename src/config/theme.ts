@@ -4,27 +4,50 @@ const theme: Theme = {
   breakpoints: ["768px"],
   sizes: {},
   space: {
-    0: "0.25rem",
-    1: "0.5rem",
-    2: "1rem",
-    3: "2rem",
-    4: "4rem",
-    5: "8rem"
+    0: "0.25rem", // 4px
+    1: "0.5rem", // 8px
+    2: "1rem", // 16px
+    3: "2rem", // 32px
+    4: "4rem", // 64px
+    5: "8rem" // 128px
+  },
+  fonts: {
+    primary: "Roboto"
   },
   fontSizes: {
-    0: "0.875rem",
-    1: "1rem",
-    2: "1.5rem",
-    3: "2.25rem",
-    4: "3.75rem",
-    5: "5.063rem"
+    mobile: {
+      h1: {}
+    },
+    desktop: {
+      h1: {},
+      h2: {},
+      h3: {},
+      h4: {},
+      h5: {},
+      paragraph: {},
+      text: {},
+      link: {}
+    }
   },
   text: {
     default: {},
     heading: {},
     paragraph: {}
   },
-  layout: {},
+  layout: {
+    container: {
+      maxWidth: 1200,
+      px: 2
+    },
+    small: {
+      maxWidth: 600,
+      px: 2
+    },
+    medium: {
+      maxWidth: 800,
+      px: 2
+    }
+  },
   buttons: {
     resetStyles: {
       p: 0,
