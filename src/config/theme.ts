@@ -67,6 +67,7 @@ const theme: Theme = {
       cursor: "pointer"
     },
     underlineOut: {
+      py: 1,
       fontFamily: "primary",
       fontSize: ["desktop.link"],
       fontWeight: 500,

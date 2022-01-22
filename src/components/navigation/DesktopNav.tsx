@@ -6,7 +6,11 @@ import { navLinks } from "config/navLinks"
 
 const DesktopNav = () => {
   return (
-    <nav>
+    <nav
+      sx={{
+        py: 2
+      }}
+    >
       <Flex
         sx={{
           alignItems: "center",
