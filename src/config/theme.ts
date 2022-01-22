@@ -51,13 +51,19 @@ const theme: Theme = {
     medium: {
       maxWidth: 800,
       px: 3
-    },
+    }
   },
   buttons: {
     resetStyles: {
       p: 0,
       bg: "transparent",
       borderRadius: 0,
+      cursor: "pointer"
+    }
+  },
+  links: {
+    resetStyles: {
+      textDecoration: "none",
       cursor: "pointer"
     }
   },

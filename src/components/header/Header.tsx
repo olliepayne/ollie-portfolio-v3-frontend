@@ -4,7 +4,11 @@ import DesktopHeader from "components/header/DesktopHeader"
 
 const Header = () => {
   return (
-    <header>
+    <header
+      sx={{
+        position: ["sticky", "static"]
+      }}
+    >
       <DesktopHeader />
     </header>
   )
