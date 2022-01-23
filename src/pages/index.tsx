@@ -16,7 +16,7 @@ import Timeline from "components/timeline/Timeline"
 // Styles
 const containerStyles: ThemeUICSSObject = {
   minHeight: "calc(100vh - 77px)",
-  py: 5,
+  py: 4,
   position: "relative"
 }
 
@@ -156,8 +156,49 @@ const Homepage: NextPage = () => {
       </Container>
 
       {/* Contact */}
-      <Box sx={containerStyles}>
-        <FakeRegion id="contact" />
+      <Box>
+        <Container sx={containerStyles}>
+          <FakeRegion id="contact" />
+
+          <Flex
+            sx={{
+              width: "100%",
+              justifyContent: "space-between"
+            }}
+          >
+            <Heading
+              as="h2"
+              variant="styles.h2"
+              sx={{
+                textDecoration: "underline"
+              }}
+            >
+              Get in touch.
+            </Heading>
+
+            {/* Avatar */}
+            <Box
+              sx={{
+                width: "200px",
+                height: "200px",
+                position: "relative",
+                borderRadius: "50%",
+                overflow: "hidden",
+                borderWidth: "4px",
+                borderStyle: "solid",
+                borderColor: "themePink"
+              }}
+            >
+              <Image
+                src="/images/headshot-1.png"
+                alt="ollie payne headshot"
+                layout="fill"
+                objectFit="cover"
+              />
+            </Box>
+          </Flex>
+          <ul></ul>
+        </Container>
       </Box>
     </main>
   )

@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Flex, Heading } from "theme-ui"
+import { Flex, Box, Heading } from "theme-ui"
 import Link from "next/link"
 
 import { navLinks } from "config/navLinks"
@@ -54,6 +54,28 @@ const DesktopNav = () => {
               </Link>
             </li>
           ))}
+          <li>
+            <span
+              sx={{
+                mx: 4,
+                fontFamily: "primary",
+                fontWeight: 700
+              }}
+            >
+              |
+            </span>
+          </li>
+          <li>
+            <Link href="/portfolio-and-projects">
+              <a
+                sx={{
+                  variant: "links.underlineOut"
+                }}
+              >
+                Portfolio / Projects
+              </a>
+            </Link>
+          </li>
         </Flex>
       </Flex>
     </nav>

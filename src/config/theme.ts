@@ -13,7 +13,7 @@ const theme: Theme = {
     6: "8rem" // 128px
   },
   colors: {
-    themePink: "#eb527b"
+    themePink: "#ffb3c7"
   },
   fonts: {
     primary: "Roboto"
@@ -36,7 +36,8 @@ const theme: Theme = {
   text: {
     default: {},
     heading: {
-      fontFamily: "primary"
+      fontFamily: "primary",
+      fontWeight: 700
     },
     paragraph: {
       fontFamily: "primary"
