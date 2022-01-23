@@ -66,13 +66,24 @@ const DesktopNav = () => {
             </span>
           </li>
           <li>
-            <Link href="/portfolio-and-projects">
+            <Link href="/portfolio">
               <a
                 sx={{
                   variant: "links.underlineOut"
                 }}
               >
-                Portfolio / Projects
+                Portfolio
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/other-projects">
+              <a
+                sx={{
+                  variant: "links.underlineOut"
+                }}
+              >
+                Other Projects
               </a>
             </Link>
           </li>
