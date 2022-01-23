@@ -24,7 +24,10 @@ const theme: Theme = {
   fontSizes: {
     mobile: {
       h1: {},
-      paragraph: "0.875rem" // 14px
+      h4: "1.333rem", // 21.33px
+      h5: "1.125rem", // 18px
+      paragraph: "0.875rem", // 14px
+      text: "0.875rem" // 14px
     },
     desktop: {
       h1: "4.209rem", // 67.34px
@@ -40,14 +43,17 @@ const theme: Theme = {
   text: {
     default: {
       fontFamily: "primary",
-      fontSize: ["mobile.paragraph", "desktop.paragraph"]
+      fontSize: ["mobile.text", "desktop.text"],
+      fontWeight: 400
     },
     heading: {
       fontFamily: "primary",
       fontWeight: 700
     },
     paragraph: {
-      fontFamily: "primary"
+      fontFamily: "primary",
+      fontWeight: 400,
+      fontSize: ["mobile.paragraph", "desktop.paragraph"]
     }
   },
   layout: {
@@ -102,6 +108,12 @@ const theme: Theme = {
           transition: "all 0.15s ease-in"
         }
       }
+    }
+  },
+  cards: {
+    primary: {
+      borderRadius: "8px",
+      boxShadow: "0 2px 4px rgb(0 0 0 / 0.3)"
     }
   },
   styles: {
