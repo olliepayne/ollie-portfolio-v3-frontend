@@ -15,16 +15,16 @@ const HamburgerButton = ({
 }: IHamburgerButton) => {
   const spanStyles: ThemeUICSSObject = {
     width: "32px",
-    height: "32px",
+    height: "20px",
     verticalAlign: "middle",
     display: "inline-flex",
     flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
+    // alignItems: "center",
+    justifyContent: "space-between",
+    position: "relative",
     ".top, .middle, .bottom": {
       width: "100%",
       height: "2px",
-      my: 1,
       opacity: 1,
       bg: "black",
       display: "inline-block",
@@ -35,7 +35,8 @@ const HamburgerButton = ({
   const spanActiveStyles: ThemeUICSSObject = {
     ...spanStyles,
     ".top": {
-      transformOrigin: "top left",
+      width: "38px",
+      transformOrigin: "0 -10px",
       transform: "rotateZ(45deg)"
     },
     ".middle": {
@@ -43,8 +44,9 @@ const HamburgerButton = ({
       opacity: 0
     },
     ".bottom": {
-      transformOrigin: "top left",
-      transform: "rotateZ(-45deg)"
+      width: "38px",
+      // transformOrigin: "left bottom",
+      transform: "rotateZ(-45deg) translateY(-10px)"
     }
   }
 
