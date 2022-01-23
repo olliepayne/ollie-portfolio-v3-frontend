@@ -1,5 +1,12 @@
 /** @jsxImportSource theme-ui */
-import { ThemeUICSSObject, Box, Container, Heading, Paragraph } from "theme-ui"
+import {
+  ThemeUICSSObject,
+  Box,
+  Container,
+  Heading,
+  Paragraph,
+  Flex
+} from "theme-ui"
 import { NextPage } from "next"
 import Image from "next/image"
 
@@ -50,6 +57,86 @@ const Homepage: NextPage = () => {
             Lorem Ipsum.
           </Paragraph>
         </Box>
+
+        <Container
+          variant="small"
+          sx={{
+            my: 5
+          }}
+        >
+          <Flex
+            as="ul"
+            sx={{
+              width: "100%",
+              p: 0,
+              m: 0,
+              flexWrap: "wrap",
+              justifyContent: "center",
+              listStyle: "none"
+            }}
+          >
+            <li>
+              <Box
+                sx={{
+                  maxWidth: "100px",
+                  position: "relative"
+                }}
+              >
+                <Image
+                  src="/images/typescript.png"
+                  alt=""
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </Box>
+            </li>
+            <li>
+              <Box
+                sx={{
+                  maxWidth: "100px",
+                  position: "relative"
+                }}
+              >
+                <Image
+                  src="/images/react.png"
+                  alt=""
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </Box>
+            </li>
+            <li>
+              <Box
+                sx={{
+                  maxWidth: "100px",
+                  position: "relative"
+                }}
+              >
+                <Image
+                  src="/images/next.png"
+                  alt=""
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </Box>
+            </li>
+            <li>
+              <Box
+                sx={{
+                  maxWidth: "100px",
+                  position: "relative"
+                }}
+              >
+                <Image
+                  src="/images/gatsby.png"
+                  alt=""
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </Box>
+            </li>
+          </Flex>
+        </Container>
       </Container>
 
       {/* Experience */}
