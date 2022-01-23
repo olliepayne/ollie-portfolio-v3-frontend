@@ -98,10 +98,12 @@ const theme: Theme = {
   },
   styles: {
     root: {
-      p: "0px",
-      m: "0px",
       "*": {
         boxSizing: "border-box"
+      },
+      body: {
+        p: "0px",
+        m: "0px"
       }
     },
     h1: {

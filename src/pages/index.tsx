@@ -10,12 +10,14 @@ import {
 import { NextPage } from "next"
 import Image from "next/image"
 
+import FakeRegion from "components/layout/FakeRegion"
 import Timeline from "components/timeline/Timeline"
 
 // Styles
 const containerStyles: ThemeUICSSObject = {
   minHeight: "calc(100vh - 77px)",
-  py: 5
+  py: 5,
+  position: "relative"
 }
 
 const Homepage: NextPage = () => {
@@ -41,7 +43,9 @@ const Homepage: NextPage = () => {
       </Box>
 
       {/* First / Home content */}
-      <Container id="about" sx={containerStyles}>
+      <Container sx={containerStyles}>
+        <FakeRegion id="about" />
+
         <Box>
           <Heading as="h3" variant="styles.h3">
             Hi
@@ -140,15 +144,21 @@ const Homepage: NextPage = () => {
       </Container>
 
       {/* Experience */}
-      <Container id="experience" variant="medium" sx={containerStyles}>
+      <Container variant="medium" sx={containerStyles}>
+        <FakeRegion id="experience" />
+
         <Timeline />
       </Container>
 
       {/* CV */}
-      <Container id="cv" variant="medium" sx={containerStyles}></Container>
+      <Container variant="medium" sx={containerStyles}>
+        <FakeRegion id="cv" />
+      </Container>
 
       {/* Contact */}
-      <Box id="contact" sx={containerStyles}></Box>
+      <Box sx={containerStyles}>
+        <FakeRegion id="contact" />
+      </Box>
     </main>
   )
 }
