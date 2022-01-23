@@ -7,29 +7,32 @@ export interface ITimelineNode {
   className?: string
   children?: ReactNode | ReactNode[]
   date: string
+  achievement?: string
   heading: string
-  text: string
+  text?: string
   isLast?: boolean
 }
 
 const TimelineNode = ({
   className,
   date,
+  achievement,
   heading,
   text,
   isLast
 }: ITimelineNode) => {
   return (
     <Box
+      className={className}
       sx={{
         position: "relative"
       }}
     >
-      {/* point */}
+      {/* Point */}
       <span
         sx={{
-          minWidth: "12px",
-          minHeight: "12px",
+          width: "12px",
+          height: "12px",
           position: "absolute",
           top: 0,
           // top: isLast ? "unset" : 0,
@@ -39,22 +42,34 @@ const TimelineNode = ({
           bg: "black"
         }}
       />
-      <Box
-        sx={{
-          py: 4
-        }}
-      >
+      <Box>
         <Heading as="h5" variant="styles.h5">
           <span
             sx={{
-              fontStyle: "italic"
+              fontSize: "1rem",
+              fontStyle: "italic",
+              color: "#3d3d3d"
             }}
           >
             {date} -{" "}
           </span>
+          <span
+            sx={{
+              color: "themePink"
+            }}
+          >
+            {achievement}
+          </span>
+          {" - "}
           {heading}
         </Heading>
-        <Paragraph>{text}</Paragraph>
+        <Paragraph
+          sx={{
+            mt: 2
+          }}
+        >
+          {text}
+        </Paragraph>
       </Box>
     </Box>
   )

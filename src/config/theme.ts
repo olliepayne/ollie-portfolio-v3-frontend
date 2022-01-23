@@ -13,7 +13,10 @@ const theme: Theme = {
     6: "8rem" // 128px
   },
   colors: {
-    themePink: "#ffb3c7"
+    // themePink: "#FFB3C7",
+    themePink: "#ff94b1",
+    magnesium: "#C4C4C4",
+    themeCharcoal: "#0A0A0A"
   },
   fonts: {
     primary: "Roboto"
@@ -99,6 +102,7 @@ const theme: Theme = {
   },
   styles: {
     root: {
+      fontFamily: "primary",
       "*": {
         boxSizing: "border-box"
       },

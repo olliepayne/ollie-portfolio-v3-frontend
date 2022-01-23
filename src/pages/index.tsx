@@ -13,6 +13,33 @@ import Image from "next/image"
 import FakeRegion from "components/layout/FakeRegion"
 import Timeline from "components/timeline/Timeline"
 
+import { ITimelineNode } from "components/timeline/TimelineNode"
+
+// Data
+const educationTimelineNodes: ITimelineNode[] = [
+  {
+    date: "1/1/2019",
+    achievement: "Highschool Diploma",
+    heading: "Graduated, a semester early, from Prescott High School"
+  }
+]
+
+const workTimelineNodes: ITimelineNode[] = [
+  {
+    date: "4/4/2019",
+    achievement: "Floor Staff",
+    heading:
+      "Began first job at the age of 17, at Gripstone Climbing in Prescott, AZ.",
+    text: "Gained fitness knowledge, watched over patrons to ensure safety and proper practices, and set routes -- all under the mentorship of a former professional climber."
+  },
+  {
+    date: "6/28/2021",
+    achievement: "Intern",
+    heading: "Started paid internship at Eightfold Technology",
+    text: "Worked on 5 projects (websites and web apps) as a solo and as part of a small development team. Used modern front end technologies such as React, Next, Gatsby, and TypeScript."
+  }
+]
+
 // Styles
 const containerStyles: ThemeUICSSObject = {
   minHeight: "calc(100vh - 77px)",
@@ -147,7 +174,33 @@ const Homepage: NextPage = () => {
       <Container variant="medium" sx={containerStyles}>
         <FakeRegion id="experience" />
 
-        <Timeline />
+        <Box>
+          <Heading as="h3" variant="styles.h3">
+            Education
+          </Heading>
+          <Timeline
+            nodes={educationTimelineNodes}
+            sx={{
+              mt: 3
+            }}
+          />
+        </Box>
+
+        <Box
+          sx={{
+            mt: 5
+          }}
+        >
+          <Heading as="h3" variant="styles.h3">
+            Work
+          </Heading>
+          <Timeline
+            nodes={workTimelineNodes}
+            sx={{
+              mt: 3
+            }}
+          />
+        </Box>
       </Container>
 
       {/* Resume */}

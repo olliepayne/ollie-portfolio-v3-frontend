@@ -1,29 +1,15 @@
 /** @jsxImportSource theme-ui */
-import { Flex, Box, Heading, Paragraph } from "theme-ui"
+import { Box } from "theme-ui"
 
 import TimelineNode, { ITimelineNode } from "components/timeline/TimelineNode"
-
-// Data
-const timelineNodes: ITimelineNode[] = [
-  {
-    date: "4/4/2019",
-    heading:
-      "Began Floor Staff position at Gripstone Climbing in Prescott, AZ.",
-    text: "Lorem Ipsum Dolor Sit."
-  },
-  {
-    date: "6/28/2021",
-    heading: "Started paid internship at Eightfold Technology",
-    text: "Lorem Ipsum Dolor Sit."
-  }
-]
 
 // Props
 export interface ITimeline {
   className?: string
+  nodes: ITimelineNode[]
 }
 
-const Timeline = ({ className }: ITimeline) => {
+const Timeline = ({ className, nodes }: ITimeline) => {
   return (
     <Box
       className={className}
@@ -32,8 +18,14 @@ const Timeline = ({ className }: ITimeline) => {
         borderLeft: "4px solid black"
       }}
     >
-      {timelineNodes.map((node, index) => (
-        <TimelineNode {...node} isLast={index === timelineNodes.length - 1} />
+      {nodes.map((node, index) => (
+        <TimelineNode
+          {...node}
+          isLast={index === nodes.length - 1}
+          sx={{
+            pb: 4
+          }}
+        />
       ))}
     </Box>
   )
