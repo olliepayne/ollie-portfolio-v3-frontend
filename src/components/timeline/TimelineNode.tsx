@@ -21,25 +21,48 @@ const TimelineNode = ({ className, children, isLast }: ITimelineNode) => {
           justifyContent: "space-between"
         }}
       >
-        {/* point */}
-        <span
-          sx={{
-            minWidth: "12px",
-            minHeight: "12px",
-            borderRadius: "50%",
-            bg: "black"
-          }}
-        />
+        {isLast ? (
+          <>
+            {/* line */}
+            <span
+              sx={{
+                width: "4px",
+                height: "100%",
+                bg: "black"
+              }}
+            />
 
-        {/* line */}
-        {!isLast && (
-          <span
-            sx={{
-              width: "4px",
-              height: "100%",
-              bg: "black"
-            }}
-          />
+            {/* point */}
+            <span
+              sx={{
+                minWidth: "12px",
+                minHeight: "12px",
+                borderRadius: "50%",
+                bg: "black"
+              }}
+            />
+          </>
+        ) : (
+          <>
+            {/* point */}
+            <span
+              sx={{
+                minWidth: "12px",
+                minHeight: "12px",
+                borderRadius: "50%",
+                bg: "black"
+              }}
+            />
+
+            {/* line */}
+            <span
+              sx={{
+                width: "4px",
+                height: "100%",
+                bg: "black"
+              }}
+            />
+          </>
         )}
       </Flex>
       {children}

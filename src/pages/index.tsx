@@ -1,8 +1,9 @@
 /** @jsxImportSource theme-ui */
 import { Box, Container, Heading, Paragraph } from "theme-ui"
+import { NextPage } from "next"
 import Image from "next/image"
 
-import { NextPage } from "next"
+import Timeline from "components/timeline/Timeline"
 
 const Homepage: NextPage = () => {
   return (
@@ -26,7 +27,7 @@ const Homepage: NextPage = () => {
         />
       </Box>
 
-      <Container>
+      <Container id="experience">
         <Box
           sx={{
             my: 4
@@ -47,6 +48,14 @@ const Homepage: NextPage = () => {
           </Paragraph>
         </Box>
       </Container>
+
+      {/* Experience */}
+      <Container variant="medium">
+        <Timeline />
+      </Container>
+
+      {/* Contact */}
+      <Box id="contact"></Box>
     </main>
   )
 }
