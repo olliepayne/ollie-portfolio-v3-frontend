@@ -12,6 +12,9 @@ const theme: Theme = {
     5: "4rem", // 64px
     6: "8rem" // 128px
   },
+  colors: {
+    themePink: "#eb527b"
+  },
   fonts: {
     primary: "Roboto"
   },
@@ -95,18 +98,32 @@ const theme: Theme = {
   },
   styles: {
     root: {
+      p: "0px",
+      m: "0px",
       "*": {
         boxSizing: "border-box"
-      },
-      body: {
-        p: 0,
-        m: 0
       }
     },
     h1: {
       variant: "text.heading",
       fontSize: ["mobile.h1", "desktop.h1"]
-    }
+    },
+    h2: {
+      variant: "text.heading",
+      fontSize: ["mobile.h2", "desktop.h2"]
+    },
+    h3: {
+      variant: "text.heading",
+      fontSize: ["mobile.h3", "desktop.h3"]
+    },
+    h4: {
+      variant: "text.heading",
+      fontSize: ["mobile.h4", "desktop.h4"]
+    },
+    h5: {
+      variant: "text.heading",
+      fontSize: ["mobile.h5", "desktop.h5"]
+    },
   }
 }
 

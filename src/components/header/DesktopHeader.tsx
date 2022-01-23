@@ -10,7 +10,7 @@ const DesktopHeader = () => {
 
   return (
     <Container>
-    <DesktopNav />
+      <DesktopNav />
     </Container>
   )
 }

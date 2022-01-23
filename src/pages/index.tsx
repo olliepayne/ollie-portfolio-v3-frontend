@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Box, Container } from "theme-ui"
+import { Box, Container, Heading, Paragraph } from "theme-ui"
 import Image from "next/image"
 
 import { NextPage } from "next"
@@ -7,6 +7,7 @@ import { NextPage } from "next"
 const Homepage: NextPage = () => {
   return (
     <main>
+      {/* Hero image */}
       <Box
         sx={{
           width: "100%",
@@ -19,10 +20,33 @@ const Homepage: NextPage = () => {
           alt=""
           layout="fill"
           objectFit="cover"
+          loading="eager"
+          placeholder="blur"
+          blurDataURL="/images/placeholder.jpg"
         />
       </Box>
 
-      <Container></Container>
+      <Container>
+        <Box
+          sx={{
+            my: 4
+          }}
+        >
+          <Heading as="h3" variant="styles.h3">
+            Hi
+          </Heading>
+          <Paragraph
+            sx={{
+              pl: 3,
+              borderLeftWidth: "4px",
+              borderLeftStyle: "solid",
+              borderLeftColor: "themePink"
+            }}
+          >
+            Lorem Ipsum.
+          </Paragraph>
+        </Box>
+      </Container>
     </main>
   )
 }

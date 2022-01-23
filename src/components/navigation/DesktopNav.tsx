@@ -8,7 +8,7 @@ const DesktopNav = () => {
   return (
     <nav
       sx={{
-        py: 2
+        py: 3
       }}
     >
       <Flex
