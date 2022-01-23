@@ -1,12 +1,14 @@
 /** @jsxImportSource theme-ui */
 import { Box } from "theme-ui"
 
-import TimelineNode, { ITimelineNode } from "components/timeline/TimelineNode"
+import TimelineEvent, {
+  ITimelineEvent
+} from "components/timeline/TimelineEvent"
 
 // Props
 export interface ITimeline {
   className?: string
-  nodes: ITimelineNode[]
+  nodes: ITimelineEvent[]
 }
 
 const Timeline = ({ className, nodes }: ITimeline) => {
@@ -19,7 +21,7 @@ const Timeline = ({ className, nodes }: ITimeline) => {
       }}
     >
       {nodes.map((node, index) => (
-        <TimelineNode
+        <TimelineEvent
           {...node}
           isLast={index === nodes.length - 1}
           sx={{

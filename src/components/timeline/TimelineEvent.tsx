@@ -1,9 +1,9 @@
 /** @jsxImportSource theme-ui */
-import { Box, Text, Heading, Paragraph } from "theme-ui"
+import { Box, Heading, Paragraph } from "theme-ui"
 import { ReactNode } from "react"
 
 // Props
-export interface ITimelineNode {
+export interface ITimelineEvent {
   className?: string
   children?: ReactNode | ReactNode[]
   date: string
@@ -13,14 +13,14 @@ export interface ITimelineNode {
   isLast?: boolean
 }
 
-const TimelineNode = ({
+const TimelineEvent = ({
   className,
   date,
   achievement,
   heading,
   text,
   isLast
-}: ITimelineNode) => {
+}: ITimelineEvent) => {
   return (
     <Box
       className={className}
@@ -75,4 +75,4 @@ const TimelineNode = ({
   )
 }
 
-export default TimelineNode
+export default TimelineEvent

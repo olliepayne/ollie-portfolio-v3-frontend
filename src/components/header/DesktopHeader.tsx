@@ -9,7 +9,11 @@ const DesktopHeader = () => {
   const handleState = () => setState(!state)
 
   return (
-    <Container>
+    <Container
+      sx={{
+        display: ["none", "block"]
+      }}
+    >
       <DesktopNav />
     </Container>
   )

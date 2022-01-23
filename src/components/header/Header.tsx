@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 
 import DesktopHeader from "components/header/DesktopHeader"
+import MobileHeader from "./MobileHeader"
 
 const Header = () => {
   const [hasScrolled, setHasScrolled] = useState(false)
@@ -26,6 +27,7 @@ const Header = () => {
         transform: "all 0.2s ease-out"
       }}
     >
+      <MobileHeader />
       <DesktopHeader />
     </header>
   )

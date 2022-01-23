@@ -13,10 +13,10 @@ import Image from "next/image"
 import FakeRegion from "components/layout/FakeRegion"
 import Timeline from "components/timeline/Timeline"
 
-import { ITimelineNode } from "components/timeline/TimelineNode"
+import { ITimelineEvent } from "components/timeline/TimelineEvent"
 
 // Data
-const educationTimelineNodes: ITimelineNode[] = [
+const educationTimelineNodes: ITimelineEvent[] = [
   {
     date: "1/1/2019",
     achievement: "Highschool Diploma",
@@ -24,7 +24,7 @@ const educationTimelineNodes: ITimelineNode[] = [
   }
 ]
 
-const workTimelineNodes: ITimelineNode[] = [
+const workTimelineNodes: ITimelineEvent[] = [
   {
     date: "4/4/2019",
     achievement: "Floor Staff",
