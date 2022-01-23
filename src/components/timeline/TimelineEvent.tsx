@@ -1,12 +1,13 @@
 /** @jsxImportSource theme-ui */
-import { Box, Heading, Paragraph } from "theme-ui"
+import { Box, Heading, Text, Paragraph } from "theme-ui"
 import { ReactNode } from "react"
 
 // Props
 export interface ITimelineEvent {
   className?: string
   children?: ReactNode | ReactNode[]
-  date: string
+  startDate: string
+  endDate: string
   achievement?: string
   heading: string
   text?: string
@@ -15,7 +16,8 @@ export interface ITimelineEvent {
 
 const TimelineEvent = ({
   className,
-  date,
+  startDate,
+  endDate,
   achievement,
   heading,
   text,
@@ -46,15 +48,6 @@ const TimelineEvent = ({
         <Heading as="h5" variant="styles.h5">
           <span
             sx={{
-              fontSize: "1rem",
-              fontStyle: "italic",
-              color: "#3d3d3d"
-            }}
-          >
-            {date} -{" "}
-          </span>
-          <span
-            sx={{
               color: "themePink"
             }}
           >
@@ -63,6 +56,18 @@ const TimelineEvent = ({
           {" - "}
           {heading}
         </Heading>
+        <Text
+          sx={{
+            my: 1,
+            display: "inline-block",
+            fontSize: "1rem",
+            fontStyle: "italic",
+            fontWeight: 500,
+            color: "#3d3d3d"
+          }}
+        >
+          {startDate} - {endDate}
+        </Text>
         <Paragraph
           sx={{
             mt: 2

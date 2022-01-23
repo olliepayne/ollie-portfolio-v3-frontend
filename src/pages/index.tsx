@@ -16,9 +16,33 @@ import Timeline from "components/timeline/Timeline"
 import { ITimelineEvent } from "components/timeline/TimelineEvent"
 
 // Data
+const technologyImages = [
+  {
+    src: "/images/typescript.png",
+    alt: "TypeScript logo"
+  },
+  {
+    src: "/images/react-logo.png",
+    alt: "React.js logo"
+  },
+  {
+    src: "/images/next.png",
+    alt: "Next.js logo"
+  },
+  {
+    src: "/images/gatsby.png",
+    alt: "Gatsby.js logo"
+  },
+  {
+    src: "/images/shopify-logo.png",
+    alt: "Shopify logo"
+  }
+]
+
 const educationTimelineNodes: ITimelineEvent[] = [
   {
-    date: "1/1/2019",
+    startDate: "Aug. 2015",
+    endDate: "Jan. 2019",
     achievement: "Highschool Diploma",
     heading: "Graduated, a semester early, from Prescott High School"
   }
@@ -26,17 +50,19 @@ const educationTimelineNodes: ITimelineEvent[] = [
 
 const workTimelineNodes: ITimelineEvent[] = [
   {
-    date: "4/4/2019",
+    startDate: "Apr. 2019",
+    endDate: "Jun. 2021",
     achievement: "Floor Staff",
     heading:
-      "Began first job at the age of 17, at Gripstone Climbing in Prescott, AZ.",
+      "Began first job at the age of 17, at Gripstone Climbing Gym in Prescott, AZ.",
     text: "Gained fitness knowledge, watched over patrons to ensure safety and proper practices, and set routes -- all under the mentorship of a former professional climber."
   },
   {
-    date: "6/28/2021",
+    startDate: "Jun. 2021",
+    endDate: "Jan. 2022",
     achievement: "Intern",
     heading: "Started paid internship at Eightfold Technology",
-    text: "Worked on 5 projects (websites and web apps) as a solo and as part of a small development team. Used modern front end technologies such as React, Next, Gatsby, and TypeScript."
+    text: "Worked on 5 projects (websites and web apps) as a solo and as part of a small development team. Used modern front end technologies such as React, Next, Gatsby, and TypeScript. Learned about E-Commerce solutions and worked directly with Shopify."
   }
 ]
 
@@ -103,69 +129,33 @@ const Homepage: NextPage = () => {
               m: 0,
               flexWrap: "wrap",
               justifyContent: "center",
-              listStyle: "none"
+              listStyle: "none",
+              li: {
+                mb: 4,
+                ":not(:last-of-type)": {
+                  mr: 4
+                }
+              }
             }}
           >
-            <li>
-              <Box
-                sx={{
-                  maxWidth: "100px",
-                  position: "relative"
-                }}
-              >
-                <Image
-                  src="/images/typescript.png"
-                  alt=""
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </Box>
-            </li>
-            <li>
-              <Box
-                sx={{
-                  maxWidth: "100px",
-                  position: "relative"
-                }}
-              >
-                <Image
-                  src="/images/react.png"
-                  alt=""
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </Box>
-            </li>
-            <li>
-              <Box
-                sx={{
-                  maxWidth: "100px",
-                  position: "relative"
-                }}
-              >
-                <Image
-                  src="/images/next.png"
-                  alt=""
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </Box>
-            </li>
-            <li>
-              <Box
-                sx={{
-                  maxWidth: "100px",
-                  position: "relative"
-                }}
-              >
-                <Image
-                  src="/images/gatsby.png"
-                  alt=""
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </Box>
-            </li>
+            {technologyImages.map(({ src, alt }, index) => (
+              <li key={`technology-image:${index}`}>
+                <Box
+                  sx={{
+                    width: "150px",
+                    height: "150px",
+                    position: "relative"
+                  }}
+                >
+                  <Image
+                    src={src}
+                    alt={alt}
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </Box>
+              </li>
+            ))}
           </Flex>
         </Container>
       </Container>

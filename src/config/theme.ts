@@ -23,7 +23,8 @@ const theme: Theme = {
   },
   fontSizes: {
     mobile: {
-      h1: {}
+      h1: {},
+      paragraph: "0.875rem" // 14px
     },
     desktop: {
       h1: "4.209rem", // 67.34px
@@ -37,7 +38,10 @@ const theme: Theme = {
     }
   },
   text: {
-    default: {},
+    default: {
+      fontFamily: "primary",
+      fontSize: ["mobile.paragraph", "desktop.paragraph"]
+    },
     heading: {
       fontFamily: "primary",
       fontWeight: 700
