@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Box, Heading, Paragraph } from "theme-ui"
+import { Flex, Box, Heading, Paragraph } from "theme-ui"
 
 import TimelineNode from "components/timeline/TimelineNode"
 
@@ -12,7 +12,7 @@ export interface ITimeline {
 
 const Timeline = ({ className }: ITimeline) => {
   return (
-    <Box>
+    <Box className={className}>
       <TimelineNode>
         <Box
           sx={{

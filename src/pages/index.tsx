@@ -1,9 +1,15 @@
 /** @jsxImportSource theme-ui */
-import { Box, Container, Heading, Paragraph } from "theme-ui"
+import { ThemeUICSSObject, Box, Container, Heading, Paragraph } from "theme-ui"
 import { NextPage } from "next"
 import Image from "next/image"
 
 import Timeline from "components/timeline/Timeline"
+
+// Styles
+const containerStyles: ThemeUICSSObject = {
+  minHeight: "calc(100vh - 77px)",
+  py: 5
+}
 
 const Homepage: NextPage = () => {
   return (
@@ -27,12 +33,9 @@ const Homepage: NextPage = () => {
         />
       </Box>
 
-      <Container id="experience">
-        <Box
-          sx={{
-            my: 4
-          }}
-        >
+      {/* First / Home content */}
+      <Container id="about" sx={containerStyles}>
+        <Box>
           <Heading as="h3" variant="styles.h3">
             Hi
           </Heading>
@@ -50,12 +53,15 @@ const Homepage: NextPage = () => {
       </Container>
 
       {/* Experience */}
-      <Container variant="medium">
+      <Container id="experience" variant="medium" sx={containerStyles}>
         <Timeline />
       </Container>
 
+      {/* CV */}
+      <Container id="cv" variant="medium" sx={containerStyles}></Container>
+
       {/* Contact */}
-      <Box id="contact"></Box>
+      <Box id="contact" sx={containerStyles}></Box>
     </main>
   )
 }

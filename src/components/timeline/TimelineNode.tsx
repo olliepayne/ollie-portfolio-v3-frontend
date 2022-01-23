@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Box, Flex, Paragraph } from "theme-ui"
+import { Box, Flex } from "theme-ui"
 import { ReactNode } from "react"
 
 // Props

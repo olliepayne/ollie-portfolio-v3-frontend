@@ -123,7 +123,7 @@ const theme: Theme = {
     h5: {
       variant: "text.heading",
       fontSize: ["mobile.h5", "desktop.h5"]
-    },
+    }
   }
 }
 
