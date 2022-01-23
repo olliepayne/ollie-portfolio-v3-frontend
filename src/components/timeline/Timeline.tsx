@@ -1,9 +1,22 @@
 /** @jsxImportSource theme-ui */
 import { Flex, Box, Heading, Paragraph } from "theme-ui"
 
-import TimelineNode from "components/timeline/TimelineNode"
+import TimelineNode, { ITimelineNode } from "components/timeline/TimelineNode"
 
-// PLACEHOLDER DATA
+// Data
+const timelineNodes: ITimelineNode[] = [
+  {
+    date: "4/4/2019",
+    heading:
+      "Began Floor Staff position at Gripstone Climbing in Prescott, AZ.",
+    text: "Lorem Ipsum Dolor Sit."
+  },
+  {
+    date: "6/28/2021",
+    heading: "Started paid internship at Eightfold Technology",
+    text: "Lorem Ipsum Dolor Sit."
+  }
+]
 
 // Props
 export interface ITimeline {
@@ -12,45 +25,16 @@ export interface ITimeline {
 
 const Timeline = ({ className }: ITimeline) => {
   return (
-    <Box className={className}>
-      <TimelineNode>
-        <Box
-          sx={{
-            py: 4
-          }}
-        >
-          <Heading as="h5" variant="styles.h5">
-            4/4/19 - Began Floor Staff position at Gripstone Climbing in
-            Prescott, AZ.
-          </Heading>
-          <Paragraph>Lorem Ipsum Dolor Sit.</Paragraph>
-        </Box>
-      </TimelineNode>
-      <TimelineNode>
-        <Box
-          sx={{
-            py: 4
-          }}
-        >
-          <Heading as="h5" variant="styles.h5">
-            6/28/21 - Began paid internship with Eightfold Technology.
-          </Heading>
-          <Paragraph>Lorem Ipsum Dolor Sit.</Paragraph>
-        </Box>
-      </TimelineNode>
-      <TimelineNode isLast>
-        <Box
-          sx={{
-            py: 4
-          }}
-        >
-          <Heading as="h5" variant="styles.h5">
-            1/24/22 - Accepted Full Time Jr Developer position with Eightfold
-            Technology.
-          </Heading>
-          <Paragraph>Lorem Ipsum Dolor Sit.</Paragraph>
-        </Box>
-      </TimelineNode>
+    <Box
+      className={className}
+      sx={{
+        pl: 3,
+        borderLeft: "4px solid black"
+      }}
+    >
+      {timelineNodes.map((node, index) => (
+        <TimelineNode {...node} isLast={index === timelineNodes.length - 1} />
+      ))}
     </Box>
   )
 }

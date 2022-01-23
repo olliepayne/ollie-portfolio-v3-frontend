@@ -150,10 +150,10 @@ const Homepage: NextPage = () => {
         <Timeline />
       </Container>
 
-      {/* CV */}
-      <Container variant="medium" sx={containerStyles}>
+      {/* Resume */}
+      {/* <Container variant="medium" sx={containerStyles}>
         <FakeRegion id="cv" />
-      </Container>
+      </Container> */}
 
       {/* Contact */}
       <Box>

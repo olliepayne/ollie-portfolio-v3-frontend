@@ -9,10 +9,10 @@ export const navLinks: IMyLink[] = [
     text: "Experience",
     url: "/#experience"
   },
-  {
-    text: "CV",
-    url: "/#cv"
-  },
+  // {
+  //   text: "Resume",
+  //   url: "/#resume"
+  // },
   {
     text: "Contact",
     url: "/#contact"
