@@ -15,7 +15,8 @@ const theme: Theme = {
   colors: {
     themePink: "#ff94b1",
     magnesium: "#C4C4C4",
-    themeCharcoal: "#0A0A0A"
+    themeCharcoal: "#0A0A0A",
+    themeBlue: "#f0f6ff"
   },
   fonts: {
     primary: "Roboto"

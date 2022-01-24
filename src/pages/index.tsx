@@ -124,7 +124,6 @@ const Homepage: NextPage = () => {
             About me.
           </Heading>
         </Container>
-
         <Container variant="medium">
           <Flex
             sx={{
@@ -222,84 +221,78 @@ const Homepage: NextPage = () => {
           </Flex>
         </Container>
 
-        <Box
+        <Container>
+          <Heading as="h3" variant="styles.h3">
+            Diverse skillset.
+          </Heading>
+        </Container>
+        <Container
+          variant="medium"
           sx={{
-            width: "100%",
-            py: 4,
-            bg: "#f0f6ff"
+            my: 5
           }}
         >
-          <Container
-            variant="medium"
+          <Flex
+            as="ul"
             sx={{
-              my: 5
+              width: "100%",
+              p: 0,
+              my: 4,
+              flexWrap: "wrap",
+              justifyContent: "center",
+              listStyle: "none",
+              li: {
+                mb: 4,
+                ":not(:last-of-type)": {
+                  mr: 4
+                }
+              }
             }}
           >
-            <Heading as="h3" variant="styles.h3">
-              Diverse skillset.
-            </Heading>
-            <Flex
-              as="ul"
-              sx={{
-                width: "100%",
-                p: 0,
-                my: 4,
-                flexWrap: "wrap",
-                justifyContent: "center",
-                listStyle: "none",
-                li: {
-                  mb: 4,
-                  ":not(:last-of-type)": {
-                    mr: 4
-                  }
-                }
-              }}
-            >
-              {technologyImages.map(({ src, alt }, index) => (
-                <li key={`technology-image:${index}`}>
-                  <Box
-                    sx={{
-                      width: "150px",
-                      height: "150px",
-                      position: "relative"
-                    }}
-                  >
-                    <Image
-                      src={src}
-                      alt={alt}
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </Box>
-                </li>
-              ))}
-            </Flex>
-            <Paragraph>Technical skills include:</Paragraph>
-            <ul
-              sx={{
-                p: 0,
-                m: 0,
-                listStyle: "none"
-              }}
-            >
-              <li>
-                <Text>TypeScript and JavaScript</Text>
+            {technologyImages.map(({ src, alt }, index) => (
+              <li key={`technology-image:${index}`}>
+                <Box
+                  sx={{
+                    width: "150px",
+                    height: "150px",
+                    position: "relative"
+                  }}
+                >
+                  <Image
+                    src={src}
+                    alt={alt}
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </Box>
               </li>
-              <li>
-                <Text>React.js</Text>
-              </li>
-              <li>
-                <Text>Gatsby.js</Text>
-              </li>
-              <li>
-                <Text>Next.js</Text>
-              </li>
-              <li>
-                <Text>Shopify</Text>
-              </li>
-            </ul>
-          </Container>
-        </Box>
+            ))}
+          </Flex>
+          <Paragraph>Technical skills include:</Paragraph>
+          <ul
+            sx={{
+              p: 0,
+              m: 0,
+              listStyle: "none"
+            }}
+          >
+            <li>
+              <Text>TypeScript and JavaScript</Text>
+            </li>
+            <li>
+              <Text>React.js</Text>
+            </li>
+            <li>
+              <Text>Gatsby.js</Text>
+            </li>
+            <li>
+              <Text>Next.js</Text>
+            </li>
+            <li>
+              <Text>Shopify</Text>
+            </li>
+          </ul>
+        </Container>
       </Box>
 
       {/* Experience */}
