@@ -13,7 +13,6 @@ const theme: Theme = {
     6: "8rem" // 128px
   },
   colors: {
-    // themePink: "#FFB3C7",
     themePink: "#ff94b1",
     magnesium: "#C4C4C4",
     themeCharcoal: "#0A0A0A"

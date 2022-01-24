@@ -37,8 +37,6 @@ const TimelineEvent = ({
           height: "12px",
           position: "absolute",
           top: 0,
-          // top: isLast ? "unset" : 0,
-          // bottom: isLast ? 0 : "unset",
           left: "-24px",
           borderRadius: "50%",
           bg: "black"

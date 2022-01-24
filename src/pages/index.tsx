@@ -82,7 +82,7 @@ const workTimelineNodes: ITimelineEvent[] = [
 
 // Styles
 const sectionContainerStyles: ThemeUICSSObject = {
-  minHeight: "calc(100vh - 77px)",
+  // minHeight: "calc(100vh - 77px)",
   py: 4,
   position: "relative"
 }
@@ -94,190 +94,213 @@ const Homepage: NextPage = () => {
       <Box
         sx={{
           width: "100%",
-          height: "400px",
+          height: "500px",
           position: "relative"
         }}
       >
         <Image
-          src="/images/placeholder.jpg"
+          src="/images/climbing-1.png"
           alt=""
           layout="fill"
           objectFit="cover"
+          objectPosition="center"
           loading="eager"
           placeholder="blur"
-          blurDataURL="/images/placeholder.jpg"
+          blurDataURL="/images/climbing-1.png"
         />
       </Box>
 
       {/* First / Home content */}
-      <Container sx={sectionContainerStyles}>
-        <FakeRegion id="about" />
-
-        <Flex
+      <Box>
+        <Container
           sx={{
-            flexDirection: "column"
+            py: 4,
+            position: "relative"
           }}
         >
+          <FakeRegion id="about" />
+
+          <Heading as="h2" variant="styles.h2">
+            About me.
+          </Heading>
+        </Container>
+
+        <Container variant="medium">
           <Flex
             sx={{
-              my: 4,
-              alignSelf: "flex-start",
-              alignItems: "center"
+              mt: 4,
+              flexDirection: "column"
             }}
           >
-            <Heading
-              as="h3"
-              variant="styles.h3"
+            <Flex
               sx={{
-                pr: 3,
-                mr: 3,
-                borderRightWidth: "4px",
-                borderRightStyle: "solid",
-                borderRightColor: "themePink"
+                my: 4,
+                alignSelf: "flex-start",
+                alignItems: "center"
               }}
             >
-              Early Life
-            </Heading>
-            <Paragraph>
-              Born in Telford, England, on July 23 2001. Moved to Arizona in the
-              summer of 2009 at the age of 7, along with both parents and
-              sister.
-            </Paragraph>
-          </Flex>
-          <Flex
-            sx={{
-              my: 4,
-              alignSelf: "flex-end",
-              alignItems: "center"
-            }}
-          >
-            <Paragraph>
-              Working out of Prescott, AZ, while also training for calisthenics
-              movements and rock climbing goals.
-            </Paragraph>
-            <Heading
-              as="h3"
-              variant="styles.h3"
+              <Heading
+                as="h3"
+                variant="styles.h3"
+                sx={{
+                  pr: 3,
+                  mr: 3,
+                  borderRightWidth: "4px",
+                  borderRightStyle: "solid",
+                  borderRightColor: "themePink"
+                }}
+              >
+                Early Life
+              </Heading>
+              <Paragraph>
+                Born in Telford, England, on July 23 2001. Moved to Arizona in
+                the summer of 2009 at the age of 7, along with both parents and
+                sister.
+              </Paragraph>
+            </Flex>
+            <Flex
               sx={{
-                pl: 3,
-                ml: 3,
-                borderLeftWidth: "4px",
-                borderLeftStyle: "solid",
-                borderLeftColor: "themePink"
+                my: 4,
+                alignSelf: "flex-end",
+                alignItems: "center"
               }}
             >
-              Current Life
-            </Heading>
+              <Paragraph>
+                Working out of Prescott, AZ, while also training for
+                calisthenics movements and rock climbing goals.
+              </Paragraph>
+              <Heading
+                as="h3"
+                variant="styles.h3"
+                sx={{
+                  pl: 3,
+                  ml: 3,
+                  borderLeftWidth: "4px",
+                  borderLeftStyle: "solid",
+                  borderLeftColor: "themePink"
+                }}
+              >
+                Current Life
+              </Heading>
+            </Flex>
+            <Flex
+              sx={{
+                my: 4,
+                alignSelf: "flex-start",
+                alignItems: "center"
+              }}
+            >
+              <Heading as="h3" variant="styles.h3">
+                Future Goals
+              </Heading>
+              <ul
+                sx={{
+                  pr: 3,
+                  ml: 3,
+                  borderLeftWidth: "4px",
+                  borderLeftStyle: "solid",
+                  borderLeftColor: "themePink"
+                }}
+              >
+                <li>
+                  <Text>Compete my in first USA Climbing competition</Text>
+                </li>
+                <li>
+                  <Text>Pass my current investment goal</Text>
+                </li>
+                <li>
+                  <Text>Complete a 5.14 rated lead climb</Text>
+                </li>
+                <li>
+                  <Text>Complete a V11 rated boulder</Text>
+                </li>
+                <li>
+                  <Text>Start a business</Text>
+                </li>
+              </ul>
+            </Flex>
           </Flex>
-          <Flex
+        </Container>
+
+        <Box
+          sx={{
+            width: "100%",
+            py: 4,
+            bg: "#f0f6ff"
+          }}
+        >
+          <Container
+            variant="medium"
             sx={{
-              my: 4,
-              alignSelf: "flex-start",
-              alignItems: "center"
+              my: 5
             }}
           >
             <Heading as="h3" variant="styles.h3">
-              Future Goals
+              Diverse skillset.
             </Heading>
+            <Flex
+              as="ul"
+              sx={{
+                width: "100%",
+                p: 0,
+                my: 4,
+                flexWrap: "wrap",
+                justifyContent: "center",
+                listStyle: "none",
+                li: {
+                  mb: 4,
+                  ":not(:last-of-type)": {
+                    mr: 4
+                  }
+                }
+              }}
+            >
+              {technologyImages.map(({ src, alt }, index) => (
+                <li key={`technology-image:${index}`}>
+                  <Box
+                    sx={{
+                      width: "150px",
+                      height: "150px",
+                      position: "relative"
+                    }}
+                  >
+                    <Image
+                      src={src}
+                      alt={alt}
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  </Box>
+                </li>
+              ))}
+            </Flex>
+            <Paragraph>Technical skills include:</Paragraph>
             <ul
               sx={{
-                pr: 3,
-                ml: 3,
-                borderLeftWidth: "4px",
-                borderLeftStyle: "solid",
-                borderLeftColor: "themePink"
+                p: 0,
+                m: 0,
+                listStyle: "none"
               }}
             >
               <li>
-                <Text>Compete my in first USA Climbing competition</Text>
+                <Text>TypeScript and JavaScript</Text>
               </li>
               <li>
-                <Text>Pass my current investment goal</Text>
+                <Text>React.js</Text>
               </li>
               <li>
-                <Text>Complete a 5.14 rated lead climb</Text>
+                <Text>Gatsby.js</Text>
               </li>
               <li>
-                <Text>Complete a V11 rated boulder</Text>
+                <Text>Next.js</Text>
               </li>
               <li>
-                <Text>Start a business</Text>
+                <Text>Shopify</Text>
               </li>
             </ul>
-          </Flex>
-        </Flex>
-
-        <Container
-          variant="medium"
-          sx={{
-            my: 5
-          }}
-        >
-          <Heading as="h3" variant="styles.h3">
-            Diverse skillset.
-          </Heading>
-          <Flex
-            as="ul"
-            sx={{
-              width: "100%",
-              p: 0,
-              my: 4,
-              flexWrap: "wrap",
-              justifyContent: "center",
-              listStyle: "none",
-              li: {
-                mb: 4,
-                ":not(:last-of-type)": {
-                  mr: 4
-                }
-              }
-            }}
-          >
-            {technologyImages.map(({ src, alt }, index) => (
-              <li key={`technology-image:${index}`}>
-                <Box
-                  sx={{
-                    width: "150px",
-                    height: "150px",
-                    position: "relative"
-                  }}
-                >
-                  <Image
-                    src={src}
-                    alt={alt}
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </Box>
-              </li>
-            ))}
-          </Flex>
-          <Paragraph>Technical skills include:</Paragraph>
-          <ul
-            sx={{
-              p: 0,
-              m: 0,
-              listStyle: "none"
-            }}
-          >
-            <li>
-              <Text>TypeScript and JavaScript</Text>
-            </li>
-            <li>
-              <Text>React.js</Text>
-            </li>
-            <li>
-              <Text>Gatsby.js</Text>
-            </li>
-            <li>
-              <Text>Next.js</Text>
-            </li>
-            <li>
-              <Text>Shopify</Text>
-            </li>
-          </ul>
-        </Container>
-      </Container>
+          </Container>
+        </Box>
+      </Box>
 
       {/* Experience */}
       <Container variant="medium" sx={sectionContainerStyles}>
