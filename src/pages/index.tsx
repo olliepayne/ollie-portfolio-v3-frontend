@@ -176,28 +176,23 @@ const Homepage: NextPage = () => {
               alignItems: "center"
             }}
           >
-            <Heading
-              as="h3"
-              variant="styles.h3"
-              sx={{
-                pr: 3,
-                borderRightWidth: "4px",
-                borderRightStyle: "solid",
-                borderRightColor: "themePink"
-              }}
-            >
+            <Heading as="h3" variant="styles.h3">
               Future Goals
             </Heading>
             <ul
               sx={{
-                m: 0
+                pr: 3,
+                ml: 3,
+                borderLeftWidth: "4px",
+                borderLeftStyle: "solid",
+                borderLeftColor: "themePink"
               }}
             >
               <li>
-                <Text>Compete in first USA Climbing competition</Text>
+                <Text>Compete my in first USA Climbing competition</Text>
               </li>
               <li>
-                <Text>Pass current investment goal</Text>
+                <Text>Pass my current investment goal</Text>
               </li>
               <li>
                 <Text>Complete a 5.14 rated lead climb</Text>
@@ -206,7 +201,7 @@ const Homepage: NextPage = () => {
                 <Text>Complete a V11 rated boulder</Text>
               </li>
               <li>
-                <Text>Progress past Jr Developer</Text>
+                <Text>Start a business</Text>
               </li>
             </ul>
           </Flex>
