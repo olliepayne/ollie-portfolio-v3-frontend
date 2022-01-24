@@ -7,7 +7,7 @@ export interface ITimelineEvent {
   className?: string
   children?: ReactNode | ReactNode[]
   startDate: string
-  endDate: string
+  endDate?: string
   achievement?: string
   heading: string
   text?: string
@@ -66,7 +66,7 @@ const TimelineEvent = ({
             color: "#3d3d3d"
           }}
         >
-          {startDate} - {endDate}
+          {startDate} - {endDate ? endDate : "Present"}
         </Text>
         <Paragraph
           sx={{

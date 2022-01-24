@@ -46,6 +46,9 @@ const ResourceCard = ({
               },
               ".overlay": {
                 opacity: 0.4
+              },
+              ".text-content": {
+                transform: "scale(0.98, 0.98)"
               }
             }
           }}
@@ -89,12 +92,15 @@ const ResourceCard = ({
 
           {/* Text content */}
           <Box
+            className="text-content"
             sx={{
               width: "100%",
               height: "100%",
               position: "relative",
               zIndex: 1,
-              color: "white"
+              color: "white",
+              transform: "scale(1, 1)",
+              transition: "all 0.5s"
             }}
           >
             <Heading

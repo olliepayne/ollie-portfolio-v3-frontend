@@ -51,7 +51,7 @@ const OtherProjectsPage: NextPage = () => {
           sx={{
             p: 0,
             my: 3,
-            gridTemplateColumns: "repeat(2, 1fr)",
+            gridTemplateColumns: "repeat(3, 1fr)",
             listStyle: "none"
           }}
         >
