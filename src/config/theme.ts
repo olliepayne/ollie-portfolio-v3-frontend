@@ -118,14 +118,7 @@ const theme: Theme = {
   },
   styles: {
     root: {
-      fontFamily: "primary",
-      "*": {
-        boxSizing: "border-box"
-      },
-      body: {
-        p: "0px",
-        m: "0px"
-      }
+      fontFamily: "primary"
     },
     h1: {
       variant: "text.heading",
