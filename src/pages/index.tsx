@@ -50,9 +50,9 @@ const educationTimelineNodes: ITimelineEvent[] = [
   {
     startDate: "Feb. 2022",
     endDate: "May. 2022",
-    achievement: "Credits",
+    achievement: "Google UI / UX Certificate",
     heading: "Lorem Ipsum."
-  }
+  },
 ]
 
 const workTimelineNodes: ITimelineEvent[] = [
@@ -65,19 +65,21 @@ const workTimelineNodes: ITimelineEvent[] = [
     text: "Gained fitness knowledge, watched over patrons to ensure safety and proper practices, and set routes -- all under the mentorship of a former professional climber."
   },
   {
+    startDate: "Mar. 2021",
+    endDate: "Sep. 2021",
+    achievement: "Front End Developer (Intern)",
+    heading:
+      "First development job, at med-tech startup Kasadia",
+    text: "Worked with company founder and migrated existing marketing site from vanilla HTML, CSS, and JavaScript, into the React based framework Next.js."
+  },
+  {
     startDate: "Jun. 2021",
     endDate: "Jan. 2022",
-    achievement: "Intern",
+    achievement: "Software Developer (Intern)",
     heading: "Started paid internship at Eightfold Technology",
     text: `Worked on 5 projects (websites and web apps) as a solo and as part of a small development team. Used modern front end technologies such as React, Next, Gatsby, and TypeScript. 
       Learned about E-Commerce solutions and worked directly with Shopify, on two stores and theme developments. Worked extensively with the CMS Strapi.js.`
   },
-  {
-    startDate: "Jan. 2022",
-    achievement: "Jr Developer",
-    heading: "Accepted a part time position at Eightfold Technology",
-    text: `Took on a part time position to allow time for further education.`
-  }
 ]
 
 // Styles
@@ -347,7 +349,10 @@ const Homepage: NextPage = () => {
       {/* Contact */}
       <section
         sx={{
+<<<<<<< HEAD
           py: 6,
+=======
+>>>>>>> c16b00866b447696b9df6bc1834b3488a93974a3
           bg: "#fff5e8"
         }}
       >
