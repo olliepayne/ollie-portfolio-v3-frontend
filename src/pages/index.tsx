@@ -81,11 +81,6 @@ const workTimelineNodes: ITimelineEvent[] = [
 ]
 
 // Styles
-const sectionContainerStyles: ThemeUICSSObject = {
-  // minHeight: "calc(100vh - 77px)",
-  py: 4,
-  position: "relative"
-}
 
 const Homepage: NextPage = () => {
   return (
@@ -111,15 +106,15 @@ const Homepage: NextPage = () => {
       </Box>
 
       {/* First / Home content */}
-      <Box>
-        <Container
-          sx={{
-            py: 4,
-            position: "relative"
-          }}
-        >
-          <FakeRegion id="about" />
+      <section
+        sx={{
+          py: 6,
+          position: "relative"
+        }}
+      >
+        <FakeRegion id="about" />
 
+        <Container>
           <Heading as="h2" variant="styles.h2">
             About me.
           </Heading>
@@ -221,23 +216,27 @@ const Homepage: NextPage = () => {
           </Flex>
         </Container>
 
-        <Container>
-          <Heading as="h3" variant="styles.h3">
-            Diverse skillset.
-          </Heading>
-        </Container>
         <Container
           variant="medium"
           sx={{
             my: 5
           }}
         >
+          <Heading
+            as="h3"
+            variant="styles.h3"
+            sx={{
+              textAlign: "center"
+            }}
+          >
+            Diverse skillset.
+          </Heading>
           <Flex
             as="ul"
             sx={{
               width: "100%",
               p: 0,
-              my: 4,
+              mt: 5,
               flexWrap: "wrap",
               justifyContent: "center",
               listStyle: "none",
@@ -293,54 +292,66 @@ const Homepage: NextPage = () => {
             </li>
           </ul>
         </Container>
-      </Box>
+      </section>
 
       {/* Experience */}
-      <Container variant="medium" sx={sectionContainerStyles}>
+      <section
+        sx={{
+          py: 6,
+          position: "relative"
+        }}
+      >
         <FakeRegion id="experience" />
 
-        <Box>
-          <Heading as="h3" variant="styles.h3">
-            Education
+        <Container>
+          <Heading as="h2" variant="styles.h2">
+            Experience.
           </Heading>
-          <Timeline
-            nodes={educationTimelineNodes}
-            sx={{
-              mt: 3
-            }}
-          />
-        </Box>
+        </Container>
 
-        <Box
-          sx={{
-            mt: 5
-          }}
-        >
-          <Heading as="h3" variant="styles.h3">
-            Work
-          </Heading>
-          <Timeline
-            nodes={workTimelineNodes}
+        <Container variant="medium">
+          <Box
             sx={{
-              mt: 3
+              mt: 4
             }}
-          />
-        </Box>
-      </Container>
+          >
+            <Heading as="h3" variant="styles.h3">
+              Education
+            </Heading>
+            <Timeline
+              nodes={educationTimelineNodes}
+              sx={{
+                mt: 3
+              }}
+            />
+          </Box>
 
-      {/* Resume */}
-      {/* <Container variant="medium" sx={sectionContainerStyles}>
-        <FakeRegion id="cv" />
-      </Container> */}
+          <Box
+            sx={{
+              mt: 5
+            }}
+          >
+            <Heading as="h3" variant="styles.h3">
+              Work
+            </Heading>
+            <Timeline
+              nodes={workTimelineNodes}
+              sx={{
+                mt: 3
+              }}
+            />
+          </Box>
+        </Container>
+      </section>
 
       {/* Contact */}
-      <Box
+      <section
         sx={{
-          // bg: "#ffe8c9"
+          py: 6,
           bg: "#fff5e8"
         }}
       >
-        <Container sx={sectionContainerStyles}>
+        <Container>
           <FakeRegion id="contact" />
 
           <Flex
@@ -380,9 +391,8 @@ const Homepage: NextPage = () => {
               />
             </Box>
           </Flex>
-          <ul></ul>
         </Container>
-      </Box>
+      </section>
     </main>
   )
 }
