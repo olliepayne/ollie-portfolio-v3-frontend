@@ -52,7 +52,7 @@ const educationTimelineNodes: ITimelineEvent[] = [
     endDate: "May. 2022",
     achievement: "Google UI / UX Certificate",
     heading: "Lorem Ipsum."
-  },
+  }
 ]
 
 const workTimelineNodes: ITimelineEvent[] = [
@@ -68,8 +68,7 @@ const workTimelineNodes: ITimelineEvent[] = [
     startDate: "Mar. 2021",
     endDate: "Sep. 2021",
     achievement: "Front End Developer (Intern)",
-    heading:
-      "First development job, at med-tech startup Kasadia",
+    heading: "First development job, at med-tech startup Kasadia",
     text: "Worked with company founder and migrated existing marketing site from vanilla HTML, CSS, and JavaScript, into the React based framework Next.js."
   },
   {
@@ -79,7 +78,19 @@ const workTimelineNodes: ITimelineEvent[] = [
     heading: "Started paid internship at Eightfold Technology",
     text: `Worked on 5 projects (websites and web apps) as a solo and as part of a small development team. Used modern front end technologies such as React, Next, Gatsby, and TypeScript. 
       Learned about E-Commerce solutions and worked directly with Shopify, on two stores and theme developments. Worked extensively with the CMS Strapi.js.`
-  },
+  }
+]
+
+const technicalSkills = [
+  "TypeScript",
+  "React.js",
+  "Gatsby.js",
+  "Next.js",
+  "Shopify",
+  "Strapi.js",
+  "HTML",
+  "CSS",
+  "JavaScript"
 ]
 
 // Styles
@@ -110,7 +121,7 @@ const Homepage: NextPage = () => {
       {/* First / Home content */}
       <section
         sx={{
-          py: 6,
+          my: 6,
           position: "relative"
         }}
       >
@@ -124,7 +135,7 @@ const Homepage: NextPage = () => {
         <Container variant="medium">
           <Flex
             sx={{
-              mt: 4,
+              my: 4,
               flexDirection: "column"
             }}
           >
@@ -146,7 +157,7 @@ const Homepage: NextPage = () => {
                   borderRightColor: "themePink"
                 }}
               >
-                Early Life
+                Early Life.
               </Heading>
               <Paragraph>
                 Born in Telford, England, on July 23 2001. Moved to Arizona in
@@ -176,7 +187,7 @@ const Homepage: NextPage = () => {
                   borderLeftColor: "themePink"
                 }}
               >
-                Current Life
+                Current Life.
               </Heading>
             </Flex>
             <Flex
@@ -187,7 +198,7 @@ const Homepage: NextPage = () => {
               }}
             >
               <Heading as="h3" variant="styles.h3">
-                Future Goals
+                Future Goals.
               </Heading>
               <ul
                 sx={{
@@ -218,7 +229,7 @@ const Homepage: NextPage = () => {
           </Flex>
         </Container>
 
-        <Container
+        {/* <Container
           variant="medium"
           sx={{
             my: 5
@@ -254,8 +265,8 @@ const Homepage: NextPage = () => {
               <li key={`technology-image:${index}`}>
                 <Box
                   sx={{
-                    width: "150px",
-                    height: "150px",
+                    width: "175px",
+                    height: "175px",
                     position: "relative"
                   }}
                 >
@@ -269,37 +280,70 @@ const Homepage: NextPage = () => {
               </li>
             ))}
           </Flex>
-          <Paragraph>Technical skills include:</Paragraph>
-          <ul
-            sx={{
-              p: 0,
-              m: 0,
-              listStyle: "none"
-            }}
-          >
-            <li>
-              <Text>TypeScript and JavaScript</Text>
-            </li>
-            <li>
-              <Text>React.js</Text>
-            </li>
-            <li>
-              <Text>Gatsby.js</Text>
-            </li>
-            <li>
-              <Text>Next.js</Text>
-            </li>
-            <li>
-              <Text>Shopify</Text>
-            </li>
-          </ul>
-        </Container>
+        </Container> */}
+
+        <Box
+          sx={{
+            py: 4,
+            bg: "almostWhite"
+          }}
+        >
+          <Container>
+            <Heading
+              as="h4"
+              variant="styles.h4"
+              sx={{
+                textAlign: "center"
+              }}
+            >
+              Technical skills.
+            </Heading>
+            <Flex
+              as="ul"
+              sx={{
+                p: 0,
+                mt: 4,
+                flexWrap: "wrap",
+                justifyContent: "center",
+                listStyle: "none",
+                li: {
+                  mb: 2
+                }
+              }}
+            >
+              {technicalSkills.map((technicalSkill, index) => (
+                <li key={`technical-skill:${index}`}>
+                  <Text
+                    sx={{
+                      fontSize: ["1.125rem", "1.125rem"],
+                      fontWeight: 500,
+                      fontStyle: "italic"
+                    }}
+                  >
+                    {technicalSkill}
+                  </Text>
+                  {index !== technicalSkills.length - 1 && (
+                    <Text
+                      sx={{
+                        mx: 2,
+                        fontSize: ["1.125rem", "1.125rem"],
+                        fontWeight: 500
+                      }}
+                    >
+                      &#8226;
+                    </Text>
+                  )}
+                </li>
+              ))}
+            </Flex>
+          </Container>
+        </Box>
       </section>
 
       {/* Experience */}
       <section
         sx={{
-          py: 6,
+          my: 6,
           position: "relative"
         }}
       >
@@ -318,7 +362,7 @@ const Homepage: NextPage = () => {
             }}
           >
             <Heading as="h3" variant="styles.h3">
-              Education
+              Education.
             </Heading>
             <Timeline
               nodes={educationTimelineNodes}
@@ -334,7 +378,7 @@ const Homepage: NextPage = () => {
             }}
           >
             <Heading as="h3" variant="styles.h3">
-              Work
+              Work.
             </Heading>
             <Timeline
               nodes={workTimelineNodes}
@@ -349,16 +393,14 @@ const Homepage: NextPage = () => {
       {/* Contact */}
       <section
         sx={{
-<<<<<<< HEAD
           py: 6,
-=======
->>>>>>> c16b00866b447696b9df6bc1834b3488a93974a3
-          bg: "#fff5e8"
+          bg: "#fff5e8",
+          position: "relative"
         }}
       >
-        <Container>
-          <FakeRegion id="contact" />
+        <FakeRegion id="contact" />
 
+        <Container>
           <Flex
             sx={{
               width: "100%",

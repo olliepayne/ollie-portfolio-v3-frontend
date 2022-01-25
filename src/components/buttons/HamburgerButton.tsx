@@ -45,7 +45,6 @@ const HamburgerButton = ({
     },
     ".bottom": {
       width: "38px",
-      // transformOrigin: "left bottom",
       transform: "rotateZ(-45deg) translateY(-10px)"
     }
   }
