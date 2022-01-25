@@ -109,7 +109,11 @@ const Homepage: NextPage = () => {
   return (
     <main>
       {/* Hero image */}
-      <HeroImage src="/images/park-city.png" alt="man sitting next to bear statue" objectPosition="center -1000px" />
+      <HeroImage
+        src="/images/park-city.png"
+        alt="man sitting next to bear statue"
+        objectPosition="center -1000px"
+      />
 
       {/* First / Home content */}
       <section
@@ -298,7 +302,8 @@ const Homepage: NextPage = () => {
         <FakeRegion id="experience" />
 
         <Container>
-          <Heading
+          <RegionHeading
+            to="experience"
             as="h2"
             variant="styles.h2"
             sx={{
@@ -306,7 +311,7 @@ const Homepage: NextPage = () => {
             }}
           >
             Experience.
-          </Heading>
+          </RegionHeading>
         </Container>
 
         <Container variant="medium">
@@ -361,7 +366,8 @@ const Homepage: NextPage = () => {
               justifyContent: "space-between"
             }}
           >
-            <Heading
+            <RegionHeading
+              to="contact"
               as="h2"
               variant="styles.h2"
               sx={{
@@ -369,7 +375,7 @@ const Homepage: NextPage = () => {
               }}
             >
               Get in touch.
-            </Heading>
+            </RegionHeading>
 
             {/* Avatar */}
             <Box

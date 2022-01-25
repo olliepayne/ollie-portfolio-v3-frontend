@@ -13,9 +13,11 @@ const HeroImage = ({ src, alt, objectPosition }: IHeroImage) => {
   return (
     <Box
       sx={{
-        width: "100%",
         height: "500px",
-        position: "relative"
+        position: "relative",
+        "*": {
+          display: "flex"
+        }
       }}
     >
       <Image
