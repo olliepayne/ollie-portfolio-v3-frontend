@@ -103,17 +103,16 @@ const technicalSkills = [
   "JavaScript"
 ]
 
-// Styles
-
 const Homepage: NextPage = () => {
   return (
     <main>
-      {/* Hero image */}
-      <HeroImage
-        src="/images/park-city.png"
-        alt="man sitting next to bear statue"
-        objectPosition="center -1000px"
-      />
+      <section>
+        <HeroImage
+          src="/images/park-city.png"
+          alt="man sitting next to bear statue"
+          objectPosition="center -1000px"
+        />
+      </section>
 
       {/* First / Home content */}
       <section

@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Container, Heading, Grid } from "theme-ui"
+import { Container, Box, Heading, Grid } from "theme-ui"
 import { NextPage } from "next"
 
 import HeroImage from "components/images/HeroImage"
@@ -43,34 +43,44 @@ const otherProjects: IResourceCard[] = [
 const OtherProjectsPage: NextPage = () => {
   return (
     <main>
-      <HeroImage src="/images/climbing-1.png" alt="" />
+      <section>
+        <HeroImage src="/images/climbing-1.png" alt="" />
+      </section>
 
-      <Container>
-        <Heading as="h3" variant="styles.h3">
-          Fitness & Rock Climbing
-        </Heading>
-        <Grid
-          as="ul"
-          sx={{
-            p: 0,
-            my: 3,
-            gridTemplateColumns: "repeat(2, 1fr)",
-            listStyle: "none"
-          }}
-        >
-          {otherProjects.map((otherProject, index) => (
-            <li key={`other-project:${index}`}>
-              <ResourceCard
-                {...otherProject}
-                sx={{
-                  width: "100%",
-                  height: "250px"
-                }}
-              />
-            </li>
-          ))}
-        </Grid>
-      </Container>
+      <section
+        sx={{
+          my: 6
+        }}
+      >
+        <Container>
+          <Box>
+            <Heading as="h3" variant="styles.h3">
+              Fitness & Rock Climbing
+            </Heading>
+            <Grid
+              as="ul"
+              sx={{
+                p: 0,
+                my: 3,
+                gridTemplateColumns: "repeat(2, 1fr)",
+                listStyle: "none"
+              }}
+            >
+              {otherProjects.map((otherProject, index) => (
+                <li key={`other-project:${index}`}>
+                  <ResourceCard
+                    {...otherProject}
+                    sx={{
+                      width: "100%",
+                      height: "250px"
+                    }}
+                  />
+                </li>
+              ))}
+            </Grid>
+          </Box>
+        </Container>
+      </section>
     </main>
   )
 }

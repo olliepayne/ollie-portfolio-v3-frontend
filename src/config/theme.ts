@@ -78,12 +78,19 @@ const theme: Theme = {
       bg: "transparent",
       borderRadius: 0,
       cursor: "pointer"
+    },
+    primary: {
+      bg: "transparent",
+      borderWidth: "2px",
+      borderStyle: "solid",
+      borderColor: "almostWhite"
     }
   },
   links: {
     resetStyles: {
       textDecoration: "none",
-      cursor: "pointer"
+      cursor: "pointer",
+      fontFamily: "primary"
     },
     underlineOut: {
       py: 1,
@@ -107,6 +114,33 @@ const theme: Theme = {
       ":hover": {
         "::after": {
           width: "100%",
+          transition: "all 0.15s ease-in"
+        }
+      }
+    },
+    underlineLeftToRight: {
+      py: 1,
+      fontFamily: "primary",
+      fontSize: ["desktop.link"],
+      fontWeight: 500,
+      cursor: "pointer",
+      position: "relative",
+      "::after": {
+        content: `""`,
+        width: 0,
+        height: "2px",
+        borderRadius: "32px",
+        position: "absolute",
+        left: 0,
+        transform: "translateX(-50%)",
+        bottom: 0,
+        bg: "black",
+        transition: "all 0.15s ease-in"
+      },
+      ":hover": {
+        "::after": {
+          width: "80%",
+          left: "50%",
           transition: "all 0.15s ease-in"
         }
       }
@@ -141,6 +175,32 @@ const theme: Theme = {
     h5: {
       variant: "text.heading",
       fontSize: ["mobile.h5", "desktop.h5"]
+    },
+    markdown: {
+      h1: {
+        my: 4,
+        variant: "styles.h1"
+      },
+      h2: {
+        my: 4,
+        variant: "styles.h1"
+      },
+      h3: {
+        my: 4,
+        variant: "styles.h1"
+      },
+      h4: {
+        my: 3,
+        variant: "styles.h1"
+      },
+      h5: {
+        my: 3,
+        variant: "styles.h1"
+      },
+      p: {
+        my: 3,
+        variant: "text.paragraph"
+      }
     }
   }
 }

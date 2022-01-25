@@ -17,6 +17,7 @@ const DesktopNav = () => {
         <Link href="/">
           <a
             sx={{
+              variant: "links.underlineLeftToRight",
               textDecoration: "none",
               fontFamily: "primary",
               fontSize: "2.369rem",
@@ -43,7 +44,7 @@ const DesktopNav = () => {
               <Link href={url}>
                 <a
                   sx={{
-                    variant: "links.underlineOut"
+                    variant: "links.underlineLeftToRight"
                   }}
                 >
                   {text}
@@ -67,7 +68,7 @@ const DesktopNav = () => {
               <Link href={url}>
                 <a
                   sx={{
-                    variant: "links.underlineOut"
+                    variant: "links.underlineLeftToRight"
                   }}
                 >
                   {text}
