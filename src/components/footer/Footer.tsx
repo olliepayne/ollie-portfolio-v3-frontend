@@ -25,32 +25,34 @@ const Footer = () => {
             &copy; {currentYear} Ollie Payne
           </Text>
 
-          <Link href={"#"}>
-            <a
-              sx={{
-                variant: "links.resetStyles",
-                position: "relative",
-                fontWeight: 500,
+          <a
+            href="https://github.com/olliepayne/ollie-portfolio-v3-frontend"
+            target="_blank"
+            rel="nofollower noreferrer noopener"
+            sx={{
+              variant: "links.resetStyles",
+              color: "black",
+              position: "relative",
+              fontWeight: 500,
+              "::after": {
+                content: `""`,
+                width: "100%",
+                height: 0,
+                position: "absolute",
+                left: 0,
+                bottom: -1,
+                bg: "themePink",
+                transition: "all 0.2s ease-out"
+              },
+              ":hover": {
                 "::after": {
-                  content: `""`,
-                  width: "100%",
-                  height: 0,
-                  position: "absolute",
-                  left: 0,
-                  bottom: -1,
-                  bg: "themePink",
-                  transition: "all 0.2s ease-out"
-                },
-                ":hover": {
-                  "::after": {
-                    height: "4px"
-                  }
+                  height: "4px"
                 }
-              }}
-            >
-              Github Repo
-            </a>
-          </Link>
+              }
+            }}
+          >
+            Github Repo
+          </a>
         </Flex>
       </Container>
     </footer>

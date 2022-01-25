@@ -4,7 +4,12 @@ import { useState, useEffect } from "react"
 import DesktopHeader from "components/header/DesktopHeader"
 import MobileHeader from "./MobileHeader"
 
-const Header = () => {
+// Props
+export interface IHeader {
+  showScrollProgress?: boolean
+}
+
+const Header = ({ showScrollProgress }: IHeader) => {
   const [hasScrolled, setHasScrolled] = useState(false)
 
   useEffect(() => {

@@ -11,6 +11,7 @@ import {
 import { NextPage } from "next"
 import Image from "next/image"
 
+import ScrollProgress from "components/ScrollProgress"
 import HeroImage from "components/images/HeroImage"
 import FakeRegion from "components/layout/FakeRegion"
 import RegionHeading from "components/text/RegionHeading"
@@ -47,13 +48,8 @@ const educationTimelineNodes: ITimelineEvent[] = [
     startDate: "Aug. 2015",
     endDate: "Jan. 2019",
     achievement: "Highschool Diploma",
-    heading: "Graduated, a semester early, from Prescott High School"
-  },
-  {
-    startDate: "Feb. 2022",
-    endDate: "May. 2022",
-    achievement: "Google UI / UX Certificate",
-    heading: "Lorem Ipsum."
+    institutionName: "Prescott High School",
+    description: ""
   }
 ]
 
@@ -62,33 +58,34 @@ const workTimelineNodes: ITimelineEvent[] = [
     startDate: "Apr. 2019",
     endDate: "Jun. 2021",
     achievement: "Floor Staff",
-    heading:
-      "Began first job at the age of 17, at Gripstone Climbing Gym in Prescott, AZ.",
-    text: "Gained fitness knowledge, watched over patrons to ensure safety and proper practices, and set routes -- all under the mentorship of a former professional climber."
-  },
-  {
-    startDate: "Mar. 2021",
-    endDate: "Sep. 2021",
-    achievement: "Front End Developer (Intern)",
-    heading: "First development job, at med-tech startup Kasadia",
-    text: "Worked with company founder and migrated existing marketing site from vanilla HTML, CSS, and JavaScript, into the React based framework Next.js."
-  },
-  {
-    startDate: "Jun. 2021",
-    endDate: "Oct. 2021",
-    achievement: "Software Developer (Intern)",
-    heading: "Started paid internship at Eightfold Technology",
-    text: `Worked on 5 projects (websites and web apps) as a solo and as part of a small development team. Used modern front end technologies such as React, Next, Gatsby, and TypeScript. 
-      Learned about E-Commerce solutions and worked directly with Shopify, on two stores and theme developments. Worked extensively with the CMS Strapi.js.`
-  },
-  {
-    startDate: "Oct. 2021",
-    endDate: "Jan. 2022",
-    achievement: "Jr Developer",
-    heading: "Accepted Full Time position at Eightfold Technology",
-    text: `Worked on 5 projects (websites and web apps) as a solo and as part of a small development team. Used modern front end technologies such as React, Next, Gatsby, and TypeScript. 
-      Learned about E-Commerce solutions and worked directly with Shopify, on two stores and theme developments. Worked extensively with the CMS Strapi.js.`
+    institutionName: "Gripstone Climbing Gym",
+    description:
+      "Gained fitness knowledge, watched over patrons to ensure safety and proper practices, and set routes -- all under the mentorship of a former professional climber."
   }
+  // {
+  //   startDate: "Mar. 2021",
+  //   endDate: "Sep. 2021",
+  //   achievement: "Front End Developer (Intern)",
+  //   heading: "First development job, at med-tech startup Kasadia",
+  //   description:
+  //     "Worked with company founder and migrated existing marketing site from vanilla HTML, CSS, and JavaScript, into the React based framework Next.js."
+  // },
+  // {
+  //   startDate: "Jun. 2021",
+  //   endDate: "Oct. 2021",
+  //   achievement: "Software Developer (Intern)",
+  //   heading: "Started paid internship at Eightfold Technology",
+  //   description: `Worked on 5 projects (websites and web apps) as a solo and as part of a small development team. Used modern front end technologies such as React, Next, Gatsby, and TypeScript.
+  //     Learned about E-Commerce solutions and worked directly with Shopify, on two stores and theme developments. Worked extensively with the CMS Strapi.js.`
+  // },
+  // {
+  //   startDate: "Oct. 2021",
+  //   endDate: "Jan. 2022",
+  //   achievement: "Jr Developer",
+  //   heading: "Accepted Full Time position at Eightfold Technology",
+  //   description: `Worked on 5 projects (websites and web apps) as a solo and as part of a small development team. Used modern front end technologies such as React, Next, Gatsby, and TypeScript.
+  //     Learned about E-Commerce solutions and worked directly with Shopify, on two stores and theme developments. Worked extensively with the CMS Strapi.js.`
+  // }
 ]
 
 const technicalSkills = [
@@ -103,9 +100,30 @@ const technicalSkills = [
   "JavaScript"
 ]
 
-const Homepage: NextPage = () => {
+// Strapi
+// export const getStaticProps = async () => {
+//   const timelineEvents = getTimelineEvents()
+
+//   return {
+//     props: {
+//       timelineEvents
+//     }
+//   }
+// }
+
+const Homepage: NextPage = (props) => {
+  // console.log(props)
+
   return (
     <main>
+      <ScrollProgress
+        sx={{
+          width: "100%",
+          position: "fixed",
+          top: "100px"
+        }}
+      />
+
       <section>
         <HeroImage
           src="/images/park-city.png"

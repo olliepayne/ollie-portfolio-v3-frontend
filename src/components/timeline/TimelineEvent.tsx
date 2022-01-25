@@ -8,9 +8,9 @@ export interface ITimelineEvent {
   children?: ReactNode | ReactNode[]
   startDate: string
   endDate?: string
-  achievement?: string
-  heading: string
-  text?: string
+  achievement: string
+  institutionName: string
+  description: string
   isLast?: boolean
 }
 
@@ -19,8 +19,8 @@ const TimelineEvent = ({
   startDate,
   endDate,
   achievement,
-  heading,
-  text,
+  institutionName,
+  description,
   isLast
 }: ITimelineEvent) => {
   return (
@@ -43,16 +43,19 @@ const TimelineEvent = ({
         }}
       />
       <Box>
-        <Heading as="h5" variant="styles.h5">
-          <span
-            sx={{
-              color: "themePink"
-            }}
-          >
-            {achievement}
+        <Heading
+          as="h5"
+          variant="styles.h5"
+          sx={{
+            color: "themePink"
+          }}
+        >
+          {achievement}
+          <span sx={{
+            color: "black"
+          }}>
+            {" "} - {institutionName}
           </span>
-          {" - "}
-          {heading}
         </Heading>
         <Text
           sx={{
@@ -71,7 +74,7 @@ const TimelineEvent = ({
             mt: 2
           }}
         >
-          {text}
+          {description}
         </Paragraph>
       </Box>
     </Box>
