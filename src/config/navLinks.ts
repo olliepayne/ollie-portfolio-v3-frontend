@@ -1,6 +1,6 @@
 import { IMyLink } from "config/myTypes"
 
-export const navLinks: IMyLink[] = [
+export const homepageRegionLinks: IMyLink[] = [
   {
     text: "About",
     url: "/#about"
@@ -9,12 +9,19 @@ export const navLinks: IMyLink[] = [
     text: "Experience",
     url: "/#experience"
   },
-  // {
-  //   text: "Resume",
-  //   url: "/#resume"
-  // },
   {
     text: "Contact",
     url: "/#contact"
+  }
+]
+
+export const pageLinks: IMyLink[] = [
+  {
+    text: "Portfolio",
+    url: "/portfolio"
+  },
+  {
+    text: "Other Projects",
+    url: "/other-projects"
   }
 ]

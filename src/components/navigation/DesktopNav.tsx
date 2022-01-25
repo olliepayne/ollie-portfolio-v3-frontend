@@ -2,15 +2,12 @@
 import { Flex, Box, Heading } from "theme-ui"
 import Link from "next/link"
 
-import { navLinks } from "config/navLinks"
+import { homepageRegionLinks, pageLinks } from "config/navLinks"
+import smoothScroll from "helpers/smoothScroll"
 
 const DesktopNav = () => {
   return (
-    <nav
-      sx={{
-        py: 3
-      }}
-    >
+    <nav>
       <Flex
         sx={{
           alignItems: "center",
@@ -41,10 +38,11 @@ const DesktopNav = () => {
             }
           }}
         >
-          {navLinks.map(({ text, url }) => (
-            <li>
-              <Link href={url}>
+          {homepageRegionLinks.map(({ text, url }, index) => (
+            <li key={`homepage-region-link:${index}`}>
+              <Link href={global?.window?.location.pathname === "/" ? "" : url}>
                 <a
+                  onClick={() => smoothScroll(url.split("/")[1])}
                   sx={{
                     variant: "links.underlineOut"
                   }}
@@ -65,28 +63,19 @@ const DesktopNav = () => {
               |
             </span>
           </li>
-          <li>
-            <Link href="/portfolio">
-              <a
-                sx={{
-                  variant: "links.underlineOut"
-                }}
-              >
-                Portfolio
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/other-projects">
-              <a
-                sx={{
-                  variant: "links.underlineOut"
-                }}
-              >
-                Other Projects
-              </a>
-            </Link>
-          </li>
+          {pageLinks.map(({ text, url }, index) => (
+            <li key={`page-link:${index}`}>
+              <Link href={url}>
+                <a
+                  sx={{
+                    variant: "links.underlineOut"
+                  }}
+                >
+                  {text}
+                </a>
+              </Link>
+            </li>
+          ))}
         </Flex>
       </Flex>
     </nav>

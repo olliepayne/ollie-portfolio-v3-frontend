@@ -12,6 +12,7 @@ import { NextPage } from "next"
 import Image from "next/image"
 
 import FakeRegion from "components/layout/FakeRegion"
+import RegionHeading from "components/text/RegionHeading"
 import Timeline from "components/timeline/Timeline"
 
 import { ITimelineEvent } from "components/timeline/TimelineEvent"
@@ -73,9 +74,17 @@ const workTimelineNodes: ITimelineEvent[] = [
   },
   {
     startDate: "Jun. 2021",
-    endDate: "Jan. 2022",
+    endDate: "Oct. 2021",
     achievement: "Software Developer (Intern)",
     heading: "Started paid internship at Eightfold Technology",
+    text: `Worked on 5 projects (websites and web apps) as a solo and as part of a small development team. Used modern front end technologies such as React, Next, Gatsby, and TypeScript. 
+      Learned about E-Commerce solutions and worked directly with Shopify, on two stores and theme developments. Worked extensively with the CMS Strapi.js.`
+  },
+  {
+    startDate: "Oct. 2021",
+    endDate: "Jan. 2022",
+    achievement: "Jr Developer",
+    heading: "Accepted Full Time position at Eightfold Technology",
     text: `Worked on 5 projects (websites and web apps) as a solo and as part of a small development team. Used modern front end technologies such as React, Next, Gatsby, and TypeScript. 
       Learned about E-Commerce solutions and worked directly with Shopify, on two stores and theme developments. Worked extensively with the CMS Strapi.js.`
   }
@@ -128,9 +137,16 @@ const Homepage: NextPage = () => {
         <FakeRegion id="about" />
 
         <Container>
-          <Heading as="h2" variant="styles.h2">
+          <RegionHeading
+            to="#about"
+            as="h2"
+            variant="styles.h2"
+            sx={{
+              textDecoration: "underline"
+            }}
+          >
             About me.
-          </Heading>
+          </RegionHeading>
         </Container>
         <Container variant="medium">
           <Flex
@@ -141,7 +157,6 @@ const Homepage: NextPage = () => {
           >
             <Flex
               sx={{
-                my: 4,
                 alignSelf: "flex-start",
                 alignItems: "center"
               }}
@@ -174,7 +189,10 @@ const Homepage: NextPage = () => {
             >
               <Paragraph>
                 Working out of Prescott, AZ, while also training for
-                calisthenics movements and rock climbing goals.
+                calisthenics movements and rock climbing goals. My current
+                fitness goals are completing my first 5.14 graded sport climb,
+                competing in my first round of USA climbing competitions, and
+                doing a hand stand.
               </Paragraph>
               <Heading
                 as="h3"
@@ -192,7 +210,6 @@ const Homepage: NextPage = () => {
             </Flex>
             <Flex
               sx={{
-                my: 4,
                 alignSelf: "flex-start",
                 alignItems: "center"
               }}
@@ -228,59 +245,6 @@ const Homepage: NextPage = () => {
             </Flex>
           </Flex>
         </Container>
-
-        {/* <Container
-          variant="medium"
-          sx={{
-            my: 5
-          }}
-        >
-          <Heading
-            as="h3"
-            variant="styles.h3"
-            sx={{
-              textAlign: "center"
-            }}
-          >
-            Diverse skillset.
-          </Heading>
-          <Flex
-            as="ul"
-            sx={{
-              width: "100%",
-              p: 0,
-              mt: 5,
-              flexWrap: "wrap",
-              justifyContent: "center",
-              listStyle: "none",
-              li: {
-                mb: 4,
-                ":not(:last-of-type)": {
-                  mr: 4
-                }
-              }
-            }}
-          >
-            {technologyImages.map(({ src, alt }, index) => (
-              <li key={`technology-image:${index}`}>
-                <Box
-                  sx={{
-                    width: "175px",
-                    height: "175px",
-                    position: "relative"
-                  }}
-                >
-                  <Image
-                    src={src}
-                    alt={alt}
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </Box>
-              </li>
-            ))}
-          </Flex>
-        </Container> */}
 
         <Box
           sx={{
@@ -350,7 +314,13 @@ const Homepage: NextPage = () => {
         <FakeRegion id="experience" />
 
         <Container>
-          <Heading as="h2" variant="styles.h2">
+          <Heading
+            as="h2"
+            variant="styles.h2"
+            sx={{
+              textDecoration: "underline"
+            }}
+          >
             Experience.
           </Heading>
         </Container>

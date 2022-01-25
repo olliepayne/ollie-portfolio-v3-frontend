@@ -108,7 +108,7 @@ const ResourceCard = ({
               variant="styles.h4"
               sx={{
                 display: "-webkit-box",
-                "-webkit-box-orient": "vertical",
+                WebkitBoxOrient: "vertical",
                 textOverflow: "ellipsis",
                 overflow: "hidden",
                 WebkitLineClamp: 3
@@ -129,7 +129,7 @@ const ResourceCard = ({
               className="preview"
               sx={{
                 display: "-webkit-box",
-                "-webkit-box-orient": "vertical",
+                WebkitBoxOrient: "vertical",
                 textOverflow: "ellipsis",
                 overflow: "hidden",
                 WebkitLineClamp: 4

@@ -23,6 +23,7 @@ const Timeline = ({ className, nodes }: ITimeline) => {
       {nodes.map((node, index) => (
         <TimelineEvent
           {...node}
+          key={`timemline-event:${index}`}
           isLast={index === nodes.length - 1}
           sx={{
             pb: 4
