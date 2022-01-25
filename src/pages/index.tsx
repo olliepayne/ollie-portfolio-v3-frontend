@@ -11,6 +11,7 @@ import {
 import { NextPage } from "next"
 import Image from "next/image"
 
+import HeroImage from "components/images/HeroImage"
 import FakeRegion from "components/layout/FakeRegion"
 import RegionHeading from "components/text/RegionHeading"
 import Timeline from "components/timeline/Timeline"
@@ -108,24 +109,7 @@ const Homepage: NextPage = () => {
   return (
     <main>
       {/* Hero image */}
-      <Box
-        sx={{
-          width: "100%",
-          height: "500px",
-          position: "relative"
-        }}
-      >
-        <Image
-          src="/images/climbing-1.png"
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          loading="eager"
-          placeholder="blur"
-          blurDataURL="/images/climbing-1.png"
-        />
-      </Box>
+      <HeroImage src="/images/park-city.png" alt="man sitting next to bear statue" objectPosition="center -1000px" />
 
       {/* First / Home content */}
       <section

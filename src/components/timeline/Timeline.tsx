@@ -17,7 +17,10 @@ const Timeline = ({ className, nodes }: ITimeline) => {
       className={className}
       sx={{
         pl: 3,
-        borderLeft: "4px solid black"
+        borderLeft: "4px solid black",
+        ".timeline-event:not(:first-of-type)": {
+          mt: 5
+        }
       }}
     >
       {nodes.map((node, index) => (
@@ -25,9 +28,7 @@ const Timeline = ({ className, nodes }: ITimeline) => {
           {...node}
           key={`timemline-event:${index}`}
           isLast={index === nodes.length - 1}
-          sx={{
-            pb: 4
-          }}
+          className="timeline-event"
         />
       ))}
     </Box>

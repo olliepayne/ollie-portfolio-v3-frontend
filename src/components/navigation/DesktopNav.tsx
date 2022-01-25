@@ -40,9 +40,8 @@ const DesktopNav = () => {
         >
           {homepageRegionLinks.map(({ text, url }, index) => (
             <li key={`homepage-region-link:${index}`}>
-              <Link href={global?.window?.location.pathname === "/" ? "" : url}>
+              <Link href={url}>
                 <a
-                  onClick={() => smoothScroll(url.split("/")[1])}
                   sx={{
                     variant: "links.underlineOut"
                   }}

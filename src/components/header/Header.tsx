@@ -19,14 +19,18 @@ const Header = () => {
   return (
     <header
       sx={{
+        width: "100%",
         py: hasScrolled ? 3 : 4,
-        position: "sticky",
+        position: "fixed",
         top: 0,
         zIndex: 10,
-        bg: "white",
-        // bg: "#2c2f3a",
+        bg: hasScrolled ? "white" : "transparent",
         boxShadow: hasScrolled ? "0 -2px 8px rgb(0 0 0 / 0.5)" : "none",
-        transition: "all 0.2s ease-out"
+        transition: "all 0.2s ease-out",
+        color: hasScrolled ? "black" : "white",
+        "a::after": {
+          bg: hasScrolled ? "black" : "white"
+        }
       }}
     >
       <MobileHeader />

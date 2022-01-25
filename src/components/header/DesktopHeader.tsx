@@ -4,12 +4,18 @@ import { useState } from "react"
 
 import DesktopNav from "components/navigation/DesktopNav"
 
-const DesktopHeader = () => {
+// Props
+export interface IDesktopHeader {
+  className?: string
+}
+
+const DesktopHeader = ({ className }: IDesktopHeader) => {
   const [state, setState] = useState(false)
   const handleState = () => setState(!state)
 
   return (
     <Container
+      className={className}
       sx={{
         display: ["none", "block"]
       }}

@@ -2,6 +2,7 @@
 import { Container, Heading, Grid } from "theme-ui"
 import { NextPage } from "next"
 
+import HeroImage from "components/images/HeroImage"
 import ResourceCard, { IResourceCard } from "components/cards/ResourceCard"
 
 // Data
@@ -42,6 +43,8 @@ const otherProjects: IResourceCard[] = [
 const OtherProjectsPage: NextPage = () => {
   return (
     <main>
+      <HeroImage src="/images/climbing-1.png" alt="" />
+
       <Container>
         <Heading as="h3" variant="styles.h3">
           Fitness & Rock Climbing
@@ -51,7 +54,7 @@ const OtherProjectsPage: NextPage = () => {
           sx={{
             p: 0,
             my: 3,
-            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns: "repeat(2, 1fr)",
             listStyle: "none"
           }}
         >
