@@ -35,11 +35,13 @@ const TimelineEvent = ({
         sx={{
           width: "12px",
           height: "12px",
+          boxSizing: "content-box",
           position: "absolute",
           top: 0,
-          left: "-24px",
+          left: "-28px",
           borderRadius: "50%",
-          bg: "black"
+          bg: "black",
+          border: "4px solid white"
         }}
       />
       <Box>
@@ -51,10 +53,13 @@ const TimelineEvent = ({
           }}
         >
           {achievement}
-          <span sx={{
-            color: "black"
-          }}>
-            {" "} - {institutionName}
+          <span
+            sx={{
+              color: "black"
+            }}
+          >
+            {" "}
+            - {institutionName}
           </span>
         </Heading>
         <Text

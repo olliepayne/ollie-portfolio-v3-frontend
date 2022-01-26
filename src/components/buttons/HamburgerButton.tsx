@@ -13,14 +13,9 @@ const HamburgerButton = ({
   activeState,
   handleActiveState
 }: IHamburgerButton) => {
-  const spanStyles: ThemeUICSSObject = {
+  const buttonStyles: ThemeUICSSObject = {
     width: "32px",
     height: "20px",
-    verticalAlign: "middle",
-    display: "inline-flex",
-    flexDirection: "column",
-    // alignItems: "center",
-    justifyContent: "space-between",
     position: "relative",
     ".top, .middle, .bottom": {
       width: "100%",
@@ -28,34 +23,45 @@ const HamburgerButton = ({
       opacity: 1,
       bg: "black",
       display: "inline-block",
+      position: "absolute",
+      left: 0,
       transition: "all 0.2s ease-out"
+    },
+    ".top": {
+      top: 0
+    },
+    ".middle": {
+      top: "50%"
+    },
+    ".bottom": {
+      bottom: 0
     }
   }
 
-  const spanActiveStyles: ThemeUICSSObject = {
-    ...spanStyles,
+  const activeStyles: ThemeUICSSObject = {
+    ...buttonStyles,
     ".top": {
-      width: "38px",
-      transformOrigin: "0 -10px",
-      transform: "rotateZ(45deg)"
+      top: "50%",
+      transform: "translateY(-50%) rotateZ(45deg)"
     },
     ".middle": {
       width: 0,
       opacity: 0
     },
     ".bottom": {
-      width: "38px",
-      transform: "rotateZ(-45deg) translateY(-10px)"
+      transform: "translateY(-50%) rotateZ(-45deg)"
     }
   }
 
   return (
-    <Button onClick={handleActiveState} variant="resetStyles">
-      <span sx={activeState ? spanActiveStyles : spanStyles}>
-        <span className="top" />
-        <span className="middle" />
-        <span className="bottom" />
-      </span>
+    <Button
+      onClick={handleActiveState}
+      variant="resetStyles"
+      sx={activeState ? activeStyles : buttonStyles}
+    >
+      <span className="top" />
+      <span className="middle" />
+      <span className="bottom" />
     </Button>
   )
 }
