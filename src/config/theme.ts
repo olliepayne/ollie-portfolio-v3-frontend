@@ -128,8 +128,7 @@ const theme: Theme = {
       "::after": {
         content: `""`,
         width: 0,
-        height: "2px",
-        borderRadius: "32px",
+        height: "3px",
         position: "absolute",
         left: 0,
         transform: "translateX(-50%)",

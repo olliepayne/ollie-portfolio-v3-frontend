@@ -17,7 +17,7 @@ const Timeline = ({ className, nodes }: ITimeline) => {
       className={className}
       sx={{
         pl: 3,
-        borderLeft: "4px solid black",
+        borderLeft: "3px solid black",
         ".timeline-event:not(:first-of-type)": {
           mt: 5
         }
