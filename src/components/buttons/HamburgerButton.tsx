@@ -57,7 +57,7 @@ const HamburgerButton = ({
     <Button
       onClick={handleActiveState}
       variant="resetStyles"
-      className="hamburger-button"
+      className={className}
       sx={activeState ? activeStyles : buttonStyles}
     >
       <span className="top" />

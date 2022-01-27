@@ -15,11 +15,17 @@ const MobileNav = ({ className, isExpanded }: IMobileNav) => {
     <nav
       className={className}
       sx={{
-        // width: "100%",
-        // height: isExpanded ? "100vh" : 0,
-        bg: "white",
+        width: isExpanded ? "calc(100vw + 100vh)" : "32px",
+        height: isExpanded ? "calc(100vw + 100vh)" : "32px",
+        position: "absolute",
+        zIndex: 10,
+        top: isExpanded ? "-100%" : -3,
+        right: isExpanded ? "-50%" : -3,
+        borderRadius: "50%",
+        bg: "themeCharcoal",
+        color: "white",
         overflow: "hidden",
-        transition: "all 0.2s ease-out"
+        transition: "all 0.45s ease-out"
       }}
     >
       {/* Homepage region links */}

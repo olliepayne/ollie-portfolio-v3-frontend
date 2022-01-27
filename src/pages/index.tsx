@@ -156,7 +156,7 @@ const Homepage: NextPage = (props) => {
         <Container variant="medium">
           <Flex
             sx={{
-              my: 4,
+              mt: 4,
               flexDirection: "column"
             }}
           >
@@ -254,6 +254,7 @@ const Homepage: NextPage = (props) => {
         <Box
           sx={{
             py: 4,
+            mt: 6,
             bg: "almostWhite"
           }}
         >
@@ -276,7 +277,10 @@ const Homepage: NextPage = (props) => {
                 justifyContent: "center",
                 listStyle: "none",
                 li: {
-                  mb: 2
+                  mb: 2,
+                  ":not(:last-of-type)": {
+                    mr: 3
+                  }
                 }
               }}
             >
@@ -285,13 +289,12 @@ const Homepage: NextPage = (props) => {
                   <Text
                     sx={{
                       fontSize: ["1.125rem", "1.125rem"],
-                      fontWeight: 500,
-                      fontStyle: "italic"
+                      fontWeight: 500
                     }}
                   >
                     {technicalSkill}
                   </Text>
-                  {index !== technicalSkills.length - 1 && (
+                  {/* {index !== technicalSkills.length - 1 && (
                     <Text
                       sx={{
                         mx: 2,
@@ -301,7 +304,7 @@ const Homepage: NextPage = (props) => {
                     >
                       &#8226;
                     </Text>
-                  )}
+                  )} */}
                 </li>
               ))}
             </Flex>

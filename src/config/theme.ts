@@ -15,7 +15,7 @@ const theme: Theme = {
   colors: {
     themePink: "#ff94b1",
     magnesium: "#C4C4C4",
-    themeCharcoal: "#0A0A0A",
+    themeCharcoal: "#1c1c1c",
     themeBlue: "#f0f6ff",
     almostWhite: "#F4F4F4",
     themeCream: "#fff5e8"
