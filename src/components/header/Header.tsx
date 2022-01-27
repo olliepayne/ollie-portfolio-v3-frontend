@@ -35,6 +35,11 @@ const Header = ({ showScrollProgress }: IHeader) => {
         color: hasScrolled ? "black" : "white",
         "a::after": {
           bg: hasScrolled ? "black" : "white"
+        },
+        ".hamburger-button": {
+          ".top, .middle, .bottom": {
+            bg: hasScrolled ? "black" : "white"
+          }
         }
       }}
     >

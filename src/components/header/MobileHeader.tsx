@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 
 import HamburgerButton from "components/buttons/HamburgerButton"
+import MobileNav from "components/navigation/MobileNav"
 
 const MobileHeader = () => {
   const [navIsExpanded, setNavIsExpanded] = useState(false)
@@ -35,8 +36,13 @@ const MobileHeader = () => {
             Ollie Payne
           </a>
         </Link>
-        <HamburgerButton activeState={navIsExpanded} handleActiveState={handleNavIsExpanded} />
+        <HamburgerButton
+          className="hamburger-button"
+          activeState={navIsExpanded}
+          handleActiveState={handleNavIsExpanded}
+        />
       </Flex>
+      <MobileNav isExpanded={navIsExpanded} />
     </Container>
   )
 }

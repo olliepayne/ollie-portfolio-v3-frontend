@@ -33,12 +33,12 @@ const TimelineEvent = ({
       {/* Point */}
       <span
         sx={{
-          width: "10px",
-          height: "10px",
+          width: "8px",
+          height: "8px",
           boxSizing: "content-box",
           position: "absolute",
           top: 0,
-          left: "-26px",
+          left: "-25px",
           borderRadius: "50%",
           bg: "black",
           border: "4px solid white"
