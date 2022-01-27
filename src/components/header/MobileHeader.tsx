@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { Container, Flex } from "theme-ui"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 
 import HamburgerButton from "components/buttons/HamburgerButton"
@@ -9,6 +9,12 @@ import MobileNav from "components/navigation/MobileNav"
 const MobileHeader = () => {
   const [navIsExpanded, setNavIsExpanded] = useState(false)
   const handleNavIsExpanded = () => setNavIsExpanded(!navIsExpanded)
+  // useEffect(() => {
+  //   if (global?.window?.document?.body?.style)
+  //     global.window.document.body.style.overflowY = navIsExpanded
+  //       ? "hidden"
+  //       : "auto"
+  // }, [navIsExpanded])
 
   return (
     <Container
