@@ -25,14 +25,23 @@ const ScrollProgress = ({ className }: IScrollProgress) => {
     }
   }, [])
 
+  // TODO: Add: debouncing
+
   return (
-    <progress
+    <Box
+      role="progressbar"
+      aria-valuenow={currentValue / pageLength}
+      aria-valuemin={0}
+      aria-valuemax={100}
       className={className}
-      value={currentValue.toString()}
-      max={pageLength.toString()}
+      sx={{
+        width: (screen.width * currentValue) / screen.height,
+        height: "2px",
+        bg: "themePink"
+      }}
     >
-      {currentValue}
-    </progress>
+      <span></span>
+    </Box>
   )
 }
 

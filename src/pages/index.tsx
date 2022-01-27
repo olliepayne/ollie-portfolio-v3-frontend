@@ -118,9 +118,9 @@ const Homepage: NextPage = (props) => {
     <main>
       <ScrollProgress
         sx={{
-          width: "100%",
           position: "fixed",
-          top: "100px"
+          top: "85px",
+          zIndex: 999
         }}
       />
 
