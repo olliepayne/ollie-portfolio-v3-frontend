@@ -10,7 +10,7 @@ export interface IScrollProgress {
 const ScrollProgress = ({ className }: IScrollProgress) => {
   const scrollLength =
     global?.window?.document?.body?.getBoundingClientRect().bottom +
-    global?.window?.screen?.height
+    global?.window?.innerHeight
 
   const [currentValue, setCurrentValue] = useState(0)
   const calculateNewValue = () => {

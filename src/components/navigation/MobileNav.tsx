@@ -12,9 +12,11 @@ export interface IMobileNav {
 const MobileNav = ({ className, isExpanded }: IMobileNav) => {
   return (
     <nav
+      className={className}
       sx={{
-        // height: "auto",
         maxHeight: isExpanded ? "1000px" : 0,
+        transformOrigin: "center top",
+        transform: isExpanded ? "scale(1, 1)" : "scale(1, 0)",
         bg: "white",
         overflow: "hidden",
         transition: "all 0.2s ease-out"

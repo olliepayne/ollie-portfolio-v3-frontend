@@ -11,7 +11,7 @@ const FakeRegion = ({ id }: IFakeRegion) => {
       id={id}
       sx={{
         position: "absolute",
-        top: "-77px",
+        top: ["94px", "-86px"],
         left: 0
       }}
     />

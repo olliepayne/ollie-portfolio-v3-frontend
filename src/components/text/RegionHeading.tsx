@@ -18,6 +18,7 @@ const RegionHeading = ({ to, children, ...props }: IRegionHeading) => {
         <Heading
           {...props}
           sx={{
+            display: "inline-block",
             "::after": {
               content: `" #"`,
               fontStyle: "italic",
