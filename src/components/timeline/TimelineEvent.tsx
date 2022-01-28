@@ -11,7 +11,6 @@ export interface ITimelineEvent {
   achievement: string
   institutionName: string
   description: string
-  isLast?: boolean
 }
 
 const TimelineEvent = ({
@@ -20,8 +19,7 @@ const TimelineEvent = ({
   endDate,
   achievement,
   institutionName,
-  description,
-  isLast
+  description
 }: ITimelineEvent) => {
   return (
     <Box

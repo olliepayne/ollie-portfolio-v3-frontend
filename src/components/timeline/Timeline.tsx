@@ -27,7 +27,6 @@ const Timeline = ({ className, nodes }: ITimeline) => {
         <TimelineEvent
           {...node}
           key={`timemline-event:${index}`}
-          isLast={index === nodes.length - 1}
           className="timeline-event"
         />
       ))}

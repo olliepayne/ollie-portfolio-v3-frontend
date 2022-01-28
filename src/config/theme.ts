@@ -152,7 +152,8 @@ const theme: Theme = {
           transition: "all 0.15s ease-in"
         }
       }
-    }
+    },
+    highlight: {}
   },
   cards: {},
   styles: {
