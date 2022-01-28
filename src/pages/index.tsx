@@ -21,6 +21,7 @@ import Timeline from "components/timeline/Timeline"
 import { ITimelineEvent } from "components/timeline/TimelineEvent"
 import { IMyLink } from "config/myTypes"
 import ExternalLink from "components/links/ExternalLink"
+import AboutMeBlock from "components/homepage/AboutMeBlock"
 
 // Data
 const educationTimelineNodes: ITimelineEvent[] = [
@@ -117,11 +118,25 @@ const Homepage: NextPage = (props) => {
       />
 
       <section>
-        <HeroImage
-          src="/images/park-city.png"
-          alt="man sitting next to bear statue"
-          objectPosition="center -1000px"
-        />
+        <Box
+          sx={{
+            height: "600px",
+            background: "linear-gradient(45deg, #4f74db, #ff94b1)"
+          }}
+        >
+          <Container
+            sx={{
+              height: "100%"
+            }}
+          >
+            <Flex
+              sx={{
+                height: "100%",
+                alignItems: "center"
+              }}
+            ></Flex>
+          </Container>
+        </Box>
       </section>
 
       {/* First / Home content */}
@@ -152,94 +167,40 @@ const Homepage: NextPage = (props) => {
               flexDirection: "column"
             }}
           >
-            <Flex
-              sx={{
-                alignSelf: "flex-start",
-                alignItems: "center"
+            <AboutMeBlock
+              heading="Early Life."
+              headingSide="LEFT"
+              text="Born in Telford, England, on July 23 2001. Moved to Arizona in the summer of 2009 at the age of 7, along with both parents and sister."
+              image={{
+                src: "/images/iron-bridge-telford.jpeg",
+                alt: ""
               }}
-            >
-              <Heading
-                as="h4"
-                variant="styles.h3"
-                sx={{
-                  pr: 3,
-                  mr: 3,
-                  borderRightWidth: "4px",
-                  borderRightStyle: "solid",
-                  borderRightColor: "themePink"
-                }}
-              >
-                Early Life.
-              </Heading>
-              <Paragraph>
-                Born in Telford, England, on July 23 2001. Moved to Arizona in
-                the summer of 2009 at the age of 7, along with both parents and
-                sister.
-              </Paragraph>
-            </Flex>
-            <Flex
-              sx={{
-                my: 4,
-                alignSelf: "flex-end",
-                alignItems: "center"
-              }}
-            >
-              <Paragraph>
-                Working out of Prescott, AZ, while also training for
+            />
+            <AboutMeBlock
+              heading="Current Life."
+              headingSide="RIGHT"
+              text="Working out of Prescott, AZ, while also training for
                 calisthenics movements and rock climbing goals. My current
                 fitness goals are completing my first 5.14 graded sport climb,
                 competing in my first round of USA climbing competitions, and
-                doing a hand stand.
-              </Paragraph>
-              <Heading
-                as="h3"
-                variant="styles.h3"
-                sx={{
-                  pl: 3,
-                  ml: 3,
-                  borderLeftWidth: "4px",
-                  borderLeftStyle: "solid",
-                  borderLeftColor: "themePink"
-                }}
-              >
-                Current Life.
-              </Heading>
-            </Flex>
-            <Flex
-              sx={{
-                alignSelf: "flex-start",
-                alignItems: "center"
+                doing a hand stand."
+              image={{
+                src: "/images/climbing-1.png",
+                alt: ""
               }}
-            >
-              <Heading as="h3" variant="styles.h3">
-                Future Goals.
-              </Heading>
-              <ul
-                sx={{
-                  pr: 3,
-                  ml: 3,
-                  borderLeftWidth: "4px",
-                  borderLeftStyle: "solid",
-                  borderLeftColor: "themePink"
-                }}
-              >
-                <li>
-                  <Text>Compete my in first USA Climbing competition</Text>
-                </li>
-                <li>
-                  <Text>Pass my current investment goal</Text>
-                </li>
-                <li>
-                  <Text>Complete a 5.14 rated lead climb</Text>
-                </li>
-                <li>
-                  <Text>Complete a V11 rated boulder</Text>
-                </li>
-                <li>
-                  <Text>Start a business</Text>
-                </li>
-              </ul>
-            </Flex>
+              sx={{
+                my: 4
+              }}
+            />
+            <AboutMeBlock
+              heading="Future goals."
+              headingSide="LEFT"
+              text=""
+              image={{
+                src: "/images/placeholder.jpg",
+                alt: ""
+              }}
+            />
           </Flex>
         </Container>
 

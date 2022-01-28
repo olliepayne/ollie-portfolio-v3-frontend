@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Box } from "theme-ui"
+import { Box, Flex } from "theme-ui"
 import Image from "next/image"
 
 // Props
@@ -15,15 +15,16 @@ const HeroImage = ({ src, alt, objectPosition }: IHeroImage) => {
       sx={{
         height: "500px",
         position: "relative",
-        "*": {
-          display: "flex"
-        }
+        justifyContent: "center",
+        overflow: "hidden"
       }}
     >
       <Image
         src={src}
         alt={alt}
-        layout="fill"
+        width={1440}
+        height={500}
+        layout="fixed"
         objectFit="cover"
         objectPosition={objectPosition}
         loading="eager"
