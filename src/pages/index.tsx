@@ -109,24 +109,27 @@ const Homepage: NextPage = (props) => {
 
   return (
     <main>
-      <ScrollProgress
+      {/* <ScrollProgress
         sx={{
           position: "fixed",
           top: ["60px", "68px"],
           zIndex: 9
         }}
-      />
+      /> */}
 
       <section>
         <Box
           sx={{
             height: "600px",
-            background: "linear-gradient(45deg, #4f74db, #ff94b1)"
+            background: "linear-gradient(360deg, #FFFFFF, #ff94b1)",
+            // background: "linear-gradient(45deg, #4f74db, #ff94b1)"
           }}
         >
           <Container
             sx={{
-              height: "100%"
+              width: "100%",
+              height: "100%",
+              // backdropFilter: "blur(20px)"
             }}
           >
             <Flex

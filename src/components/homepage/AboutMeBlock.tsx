@@ -76,7 +76,6 @@ const AboutMeBlock = ({
           sx={{
             maxWidth: "125px",
             pr: 3,
-            mr: 3,
             position: "relative",
             zIndex: 1,
             borderRightWidth: "4px",
@@ -102,9 +101,8 @@ const AboutMeBlock = ({
           as="h4"
           variant="styles.h4"
           sx={{
-            maxWidth: "25%",
+            maxWidth: "125px",
             pl: 3,
-            ml: 3,
             position: "relative",
             zIndex: 1,
             borderLeftWidth: "4px",
