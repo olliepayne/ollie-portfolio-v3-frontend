@@ -28,7 +28,7 @@ const HamburgerButton = ({
       transition: "all 0.2s ease-out"
     },
     ".top": {
-      top: 0
+      top: 0,
     },
     ".middle": {
       top: "50%",

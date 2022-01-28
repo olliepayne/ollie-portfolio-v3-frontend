@@ -5,17 +5,34 @@ import Link from "next/link"
 
 import HamburgerButton from "components/buttons/HamburgerButton"
 import MobileNav from "components/navigation/MobileNav"
-import { isExternal } from "util/types"
 
-const MobileHeader = () => {
+// Props
+export interface IMobileHeader {
+  hasScrolled: boolean
+}
+
+const MobileHeader = ({ hasScrolled }: IMobileHeader) => {
   const [navIsExpanded, setNavIsExpanded] = useState(false)
   const handleNavIsExpanded = () => setNavIsExpanded(!navIsExpanded)
-  useEffect(() => {
+
+  const [headerColor, setHeaderColor] = useState("white")
+  const handleSetHeaderColor = () => {
+    if (navIsExpanded || !hasScrolled) return setHeaderColor("white")
+
+    setHeaderColor("black")
+  }
+
+  const handleToggleScrolling = () => {
     if (global?.window?.document?.body?.style)
       global.window.document.body.style.overflowY = navIsExpanded
         ? "hidden"
         : "auto"
-  }, [navIsExpanded])
+  }
+
+  useEffect(() => {
+    handleToggleScrolling()
+    handleSetHeaderColor()
+  }, [hasScrolled, navIsExpanded])
 
   return (
     <Container
@@ -40,7 +57,7 @@ const MobileHeader = () => {
               fontSize: "2.369rem",
               fontWeight: 500,
               cursor: "pointer",
-              color: navIsExpanded ? "white" : "black"
+              color: headerColor
             }}
           >
             Ollie Payne
@@ -52,11 +69,22 @@ const MobileHeader = () => {
           className="hamburger-button"
           sx={{
             position: "relative",
-            zIndex: 11
+            zIndex: 11,
+            ".top, .middle, .bottom": {
+              bg: headerColor
+            }
           }}
         />
       </Flex>
-      <MobileNav isExpanded={navIsExpanded} />
+      <MobileNav
+        hasScrolled={hasScrolled}
+        isExpanded={navIsExpanded}
+        sx={{
+          "a::after": {
+            bg: headerColor
+          }
+        }}
+      />
     </Container>
   )
 }

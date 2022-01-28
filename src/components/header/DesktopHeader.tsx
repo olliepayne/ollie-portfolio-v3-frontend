@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Container, Flex, Heading } from "theme-ui"
-import { useState } from "react"
+import { Container } from "theme-ui"
 
 import DesktopNav from "components/navigation/DesktopNav"
 
@@ -10,9 +9,6 @@ export interface IDesktopHeader {
 }
 
 const DesktopHeader = ({ className }: IDesktopHeader) => {
-  const [state, setState] = useState(false)
-  const handleState = () => setState(!state)
-
   return (
     <Container
       className={className}

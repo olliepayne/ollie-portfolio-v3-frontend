@@ -1,8 +1,8 @@
 /** @jsxImportSource theme-ui */
-import { useState, useEffect } from "react"
+import { useState, useEffect, createContext } from "react"
 
 import DesktopHeader from "components/header/DesktopHeader"
-import MobileHeader from "./MobileHeader"
+import MobileHeader from "components/header/MobileHeader"
 
 const Header = () => {
   const [hasScrolled, setHasScrolled] = useState(false)
@@ -26,20 +26,18 @@ const Header = () => {
         zIndex: 10,
         bg: hasScrolled ? "white" : "transparent",
         boxShadow: hasScrolled ? "0 -2px 8px rgb(0 0 0 / 0.5)" : "none",
-        transition: "all 0.2s ease-out",
-        color: hasScrolled ? "black" : "white",
-        "a::after": {
-          bg: hasScrolled ? "black" : "white"
-        },
-        ".hamburger-button": {
-          ".top, .middle, .bottom": {
-            bg: hasScrolled ? "black" : "white"
-          }
-        }
+        transition: "all 0.2s ease-out"
       }}
     >
-      <MobileHeader />
-      <DesktopHeader />
+      <MobileHeader hasScrolled={hasScrolled} />
+      <DesktopHeader
+        sx={{
+          color: hasScrolled ? "black" : "white",
+          "a::after": {
+            bg: hasScrolled ? "black" : "white"
+          }
+        }}
+      />
     </header>
   )
 }

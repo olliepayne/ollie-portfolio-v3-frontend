@@ -8,6 +8,7 @@ import { homepageRegionLinks, pageLinks } from "config/navLinks"
 // Props
 export interface IMobileNav {
   className?: string
+  hasScrolled: boolean
   isExpanded: boolean
 }
 
@@ -51,7 +52,10 @@ const MobileNav = ({ className, isExpanded }: IMobileNav) => {
             m: 0,
             flexDirection: "column",
             alignItems: "center",
-            listStyle: "none"
+            listStyle: "none",
+            ":not(:first-of-type)": {
+              mt: 2
+            }
           }}
         >
           {homepageRegionLinks.map(({ text, url }, index) => (
@@ -59,7 +63,8 @@ const MobileNav = ({ className, isExpanded }: IMobileNav) => {
               <Link href={url}>
                 <a
                   sx={{
-                    variant: "links.underlineLeftToRight"
+                    variant: "links.underlineLeftToRight",
+                    display: "inline-block"
                   }}
                 >
                   {text}
@@ -71,6 +76,7 @@ const MobileNav = ({ className, isExpanded }: IMobileNav) => {
 
         <Divider
           sx={{
+            width: "32px",
             height: "2px",
             borderRadius: "4px",
             bg: "white"
@@ -85,7 +91,10 @@ const MobileNav = ({ className, isExpanded }: IMobileNav) => {
             mt: 4,
             flexDirection: "column",
             alignItems: "center",
-            listStyle: "none"
+            listStyle: "none",
+            ":not(:first-of-type)": {
+              mt: 2
+            }
           }}
         >
           {pageLinks.map(({ text, url }, index) => (
@@ -93,7 +102,8 @@ const MobileNav = ({ className, isExpanded }: IMobileNav) => {
               <Link href={url}>
                 <a
                   sx={{
-                    variant: "links.underlineLeftToRight"
+                    variant: "links.underlineLeftToRight",
+                    display: "inline-block"
                   }}
                 >
                   {text}
