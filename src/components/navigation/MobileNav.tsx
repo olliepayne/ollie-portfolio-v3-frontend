@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-import { Flex } from "theme-ui"
+import { Box, Flex } from "theme-ui"
 import Link from "next/link"
 
 import { homepageRegionLinks, pageLinks } from "config/navLinks"
@@ -15,17 +15,16 @@ const MobileNav = ({ className, isExpanded }: IMobileNav) => {
     <nav
       className={className}
       sx={{
-        width: isExpanded ? "calc(100vw + 100vh)" : "32px",
-        height: isExpanded ? "calc(100vw + 100vh)" : "32px",
+        width: "32px",
+        height: "32px",
         position: "absolute",
         zIndex: 10,
-        top: isExpanded ? "-100%" : -3,
-        right: isExpanded ? "-50%" : -3,
+        transform: isExpanded ? "scale(100, 100)" : "scale(1, 1)",
         borderRadius: "50%",
         bg: "themeCharcoal",
         color: "white",
         overflow: "hidden",
-        transition: "all 0.45s ease-out"
+        transition: "all 0.35s ease-out"
       }}
     >
       {/* Homepage region links */}

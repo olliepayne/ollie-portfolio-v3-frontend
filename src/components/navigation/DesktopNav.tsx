@@ -3,7 +3,6 @@ import { Flex, Box, Heading } from "theme-ui"
 import Link from "next/link"
 
 import { homepageRegionLinks, pageLinks } from "config/navLinks"
-import smoothScroll from "helpers/smoothScroll"
 
 const DesktopNav = () => {
   return (

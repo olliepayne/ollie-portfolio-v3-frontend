@@ -120,7 +120,7 @@ const Homepage: NextPage = (props) => {
         sx={{
           position: "fixed",
           top: ["92px", "84px"],
-          zIndex: 999
+          zIndex: 9
         }}
       />
 

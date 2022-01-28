@@ -31,7 +31,8 @@ const HamburgerButton = ({
       top: 0
     },
     ".middle": {
-      top: "50%"
+      top: "50%",
+      transform: "translateY(-50%)"
     },
     ".bottom": {
       bottom: 0

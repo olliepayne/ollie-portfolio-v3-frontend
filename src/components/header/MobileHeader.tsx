@@ -21,8 +21,7 @@ const MobileHeader = () => {
     <Container
       sx={{
         py: 2,
-        display: ["block", "none"],
-        overflow: "hidden"
+        display: ["block", "none"]
       }}
     >
       <Flex
