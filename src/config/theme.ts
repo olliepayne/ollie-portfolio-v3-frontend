@@ -16,9 +16,8 @@ const theme: Theme = {
     themePink: "#ff94b1",
     magnesium: "#C4C4C4",
     themeCharcoal: "#1c1c1c",
-    themeBlue: "#f0f6ff",
+    themePebble: "#5f6566",
     almostWhite: "#F4F4F4",
-    // themeCream: "#fff5e8"
     themeCream: "#fffcf5"
   },
   fonts: {
@@ -58,6 +57,14 @@ const theme: Theme = {
       fontFamily: "body",
       fontWeight: 400,
       fontSize: ["mobile.paragraph", "desktop.paragraph"]
+    },
+    srOnly: {
+      width: 1,
+      height: 1,
+      position: "absolute",
+      top: "auto",
+      left: -10000,
+      overflow: "hidden"
     }
   },
   layout: {

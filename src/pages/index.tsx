@@ -122,7 +122,7 @@ const Homepage: NextPage = (props) => {
       <ScrollProgress
         sx={{
           position: "fixed",
-          top: ["92px", "84px"],
+          top: ["60px", "68px"],
           zIndex: 9
         }}
       />
@@ -292,7 +292,7 @@ const Homepage: NextPage = (props) => {
                   <Text
                     sx={{
                       fontSize: ["1.125rem", "1.125rem"],
-                      fontWeight: 500,
+                      fontWeight: 500
                       // color: ""
                     }}
                   >

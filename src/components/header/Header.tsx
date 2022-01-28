@@ -1,26 +1,26 @@
 /** @jsxImportSource theme-ui */
-import { useState, useEffect, createContext } from "react"
+import { useState, useEffect } from "react"
 
 import DesktopHeader from "components/header/DesktopHeader"
 import MobileHeader from "components/header/MobileHeader"
+import { debounce } from "helpers/general"
 
 const Header = () => {
   const [hasScrolled, setHasScrolled] = useState(false)
+  const checkScroll = () => {
+    if (global?.window?.scrollY > 0) return setHasScrolled(true)
+    setHasScrolled(false)
+  }
 
   useEffect(() => {
-    document.addEventListener("scroll", () => {
-      if (window.scrollY > 0) return setHasScrolled(true)
-      setHasScrolled(false)
-    })
-
-    return () => {}
+    document.addEventListener("scroll", debounce(checkScroll, 10))
   }, [])
 
   return (
     <header
       sx={{
         width: "100%",
-        py: hasScrolled ? 3 : 4,
+        py: hasScrolled ? 2 : 3,
         position: "fixed",
         top: 0,
         zIndex: 10,

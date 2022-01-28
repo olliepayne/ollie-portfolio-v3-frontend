@@ -37,7 +37,6 @@ const MobileHeader = ({ hasScrolled }: IMobileHeader) => {
   return (
     <Container
       sx={{
-        py: 2,
         display: ["block", "none"]
       }}
     >
