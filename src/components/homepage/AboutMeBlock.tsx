@@ -29,6 +29,7 @@ const AboutMeBlock = ({
         py: 5,
         position: "relative",
         justifyContent: "space-between",
+        alignItems: "center",
         color: "white",
         overflow: "hidden",
         ":hover": {
@@ -73,7 +74,7 @@ const AboutMeBlock = ({
           as="h4"
           variant="styles.h4"
           sx={{
-            maxWidth: "25%",
+            maxWidth: "125px",
             pr: 3,
             mr: 3,
             position: "relative",
