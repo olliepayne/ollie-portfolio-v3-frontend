@@ -18,7 +18,8 @@ const theme: Theme = {
     themeCharcoal: "#1c1c1c",
     themeBlue: "#f0f6ff",
     almostWhite: "#F4F4F4",
-    themeCream: "#fff5e8"
+    // themeCream: "#fff5e8"
+    themeCream: "#fffcf5"
   },
   fonts: {
     heading: "Montserrat",
@@ -91,7 +92,7 @@ const theme: Theme = {
     resetStyles: {
       textDecoration: "none",
       cursor: "pointer",
-      fontFamily: "primary"
+      fontFamily: "body"
     },
     underlineOut: {
       py: 1,

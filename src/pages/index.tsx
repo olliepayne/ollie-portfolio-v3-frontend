@@ -89,15 +89,18 @@ const workTimelineNodes: ITimelineEvent[] = [
 ]
 
 const technicalSkills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
   "TypeScript",
   "React.js",
   "Gatsby.js",
   "Next.js",
-  "Shopify",
   "Strapi.js",
-  "HTML",
-  "CSS",
-  "JavaScript"
+  "Shopify",
+  "Liquid",
+  "Figma",
+  "Adobe XD"
 ]
 
 // Strapi
@@ -167,7 +170,7 @@ const Homepage: NextPage = (props) => {
               }}
             >
               <Heading
-                as="h3"
+                as="h4"
                 variant="styles.h3"
                 sx={{
                   pr: 3,
@@ -258,10 +261,10 @@ const Homepage: NextPage = (props) => {
             bg: "almostWhite"
           }}
         >
-          <Container>
+          <Container variant="medium">
             <Heading
-              as="h4"
-              variant="styles.h4"
+              as="h3"
+              variant="styles.h3"
               sx={{
                 textAlign: "center"
               }}
@@ -279,7 +282,7 @@ const Homepage: NextPage = (props) => {
                 li: {
                   mb: 2,
                   ":not(:last-of-type)": {
-                    mr: 3
+                    mr: 4
                   }
                 }
               }}
@@ -289,7 +292,8 @@ const Homepage: NextPage = (props) => {
                   <Text
                     sx={{
                       fontSize: ["1.125rem", "1.125rem"],
-                      fontWeight: 500
+                      fontWeight: 500,
+                      // color: ""
                     }}
                   >
                     {technicalSkill}
@@ -373,7 +377,7 @@ const Homepage: NextPage = (props) => {
       <section
         sx={{
           py: 6,
-          bg: "#fff5e8",
+          bg: "themeCream",
           position: "relative"
         }}
       >

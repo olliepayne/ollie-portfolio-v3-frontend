@@ -36,7 +36,7 @@ const MobileHeader = () => {
               position: "relative",
               zIndex: 11,
               textDecoration: "none",
-              fontFamily: "primary",
+              fontFamily: "body",
               fontSize: "2.369rem",
               fontWeight: 500,
               cursor: "pointer",

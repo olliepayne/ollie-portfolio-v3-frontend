@@ -1,5 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { Box } from "theme-ui"
+import { alpha } from "@theme-ui/color"
 import { useEffect, useState } from "react"
 
 // Props
@@ -16,9 +17,6 @@ const ScrollProgress = ({ className }: IScrollProgress) => {
   const calculateNewValue = () => {
     const newState = global?.window?.scrollY
     setCurrentValue(newState)
-
-    console.log(newState)
-    console.log(`current value / scroll length: ${newState / scrollLength}`)
   }
 
   const [adjustedWidth, setAdjustedWidth] = useState(0)
@@ -56,8 +54,9 @@ const ScrollProgress = ({ className }: IScrollProgress) => {
       sx={{
         width: `${adjustedWidth}%`,
         height: "2px",
-        bg: "themePink",
-        display: currentValue > 0 ? "block" : "none"
+        bg: alpha("themePink", 0.75),
+        display: currentValue > 0 ? "block" : "none",
+        borderRadius: "4px"
       }}
     >
       <span></span>
