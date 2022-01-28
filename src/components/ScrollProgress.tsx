@@ -40,7 +40,8 @@ const ScrollProgress = ({ className }: IScrollProgress) => {
       sx={{
         width: `${scrollPercent}%`,
         height: "4px",
-        bg: alpha("themePink", 0.75),
+        bg: "black",
+        opacity: 0.1,
         display: scrollPercent > 0 ? "block" : "none",
         borderRadius: "4px"
       }}

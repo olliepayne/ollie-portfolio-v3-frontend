@@ -35,6 +35,8 @@ const ResourceCard = ({
           sx={{
             p: 4,
             position: "relative",
+            borderRadius: "8px",
+            boxShadow: "0 2px 4px rgb(0 0 0 / 0.3)",
             overflow: "hidden",
             transition: "all 0.5s",
             ":hover": {

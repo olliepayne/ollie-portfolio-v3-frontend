@@ -16,7 +16,7 @@ const theme: Theme = {
     themePink: "#ff94b1",
     magnesium: "#C4C4C4",
     themeCharcoal: "#1c1c1c",
-    themePebble: "#5f6566",
+    themePebble: "#5d707a",
     almostWhite: "#F4F4F4",
     themeCream: "#fffcf5"
   },
@@ -154,12 +154,7 @@ const theme: Theme = {
       }
     }
   },
-  cards: {
-    primary: {
-      borderRadius: "8px",
-      boxShadow: "0 2px 4px rgb(0 0 0 / 0.3)"
-    }
-  },
+  cards: {},
   styles: {
     root: {
       fontFamily: "primary"

@@ -6,7 +6,8 @@ import {
   Heading,
   Paragraph,
   Flex,
-  Text
+  Text,
+  Card
 } from "theme-ui"
 import { NextPage } from "next"
 import Image from "next/image"
@@ -18,31 +19,10 @@ import RegionHeading from "components/text/RegionHeading"
 import Timeline from "components/timeline/Timeline"
 
 import { ITimelineEvent } from "components/timeline/TimelineEvent"
+import { IMyLink } from "config/myTypes"
+import ExternalLink from "components/links/ExternalLink"
 
 // Data
-const technologyImages = [
-  {
-    src: "/images/typescript.png",
-    alt: "TypeScript logo"
-  },
-  {
-    src: "/images/react-logo.png",
-    alt: "React.js logo"
-  },
-  {
-    src: "/images/next.png",
-    alt: "Next.js logo"
-  },
-  {
-    src: "/images/gatsby.png",
-    alt: "Gatsby.js logo"
-  },
-  {
-    src: "/images/shopify-logo.png",
-    alt: "Shopify logo"
-  }
-]
-
 const educationTimelineNodes: ITimelineEvent[] = [
   {
     startDate: "Aug. 2015",
@@ -98,9 +78,18 @@ const technicalSkills = [
   "Next.js",
   "Strapi.js",
   "Shopify",
-  "Liquid",
-  "Figma",
-  "Adobe XD"
+  "Liquid"
+]
+
+const contactLinks: IMyLink[] = [
+  {
+    text: "LinkedIn",
+    url: "https://www.linkedin.com/in/oliverpayne01/"
+  },
+  {
+    text: "Email",
+    url: "mailto:olliepayne@me.com"
+  }
 ]
 
 // Strapi
@@ -390,28 +379,73 @@ const Homepage: NextPage = (props) => {
               justifyContent: "space-between"
             }}
           >
-            <RegionHeading
-              to="contact"
-              as="h2"
-              variant="styles.h2"
+            <Box
               sx={{
-                textDecoration: "underline"
+                flex: "1 1 100%"
               }}
             >
-              Get in touch.
-            </RegionHeading>
+              <RegionHeading
+                to="contact"
+                as="h2"
+                variant="styles.h2"
+                sx={{
+                  textDecoration: "underline"
+                }}
+              >
+                Get in touch.
+              </RegionHeading>
+              <Card
+                sx={{
+                  width: "50%",
+                  p: [3, 4],
+                  ml: 3,
+                  mt: 4,
+                  bg: "themePebble",
+                  boxShadow: "10px 10px #ff94b1",
+                  transition: "all 0.3s ease-out",
+                  ":hover": {
+                    boxShadow: "30px 30px #C4C4C4",
+                    transform: "perspective(800px) translate(-10px, -10px)"
+                  }
+                }}
+              >
+                <Flex
+                  as="ul"
+                  sx={{
+                    listStyle: "none",
+                    "li:not(:last-of-type)": {
+                      mr: 4
+                    }
+                  }}
+                >
+                  {contactLinks.map(({ text, url }, index) => (
+                    <li key={`contact-link:${index}`}>
+                      <ExternalLink url={url}>
+                        <Heading
+                          as="h5"
+                          variant="styles.h5"
+                          sx={{
+                            color: "white"
+                          }}
+                        >
+                          {text}
+                        </Heading>
+                      </ExternalLink>
+                    </li>
+                  ))}
+                </Flex>
+              </Card>
+            </Box>
 
             {/* Avatar */}
             <Box
               sx={{
-                width: "200px",
-                height: "200px",
+                // width: ["150px", "200px"],
+                height: ["150px", "200px"],
+                flex: ["1 0 150px", "1 0 200px"],
                 position: "relative",
                 borderRadius: "50%",
-                overflow: "hidden",
-                borderWidth: "4px",
-                borderStyle: "solid",
-                borderColor: "themePink"
+                overflow: "hidden"
               }}
             >
               <Image
