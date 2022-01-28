@@ -21,7 +21,8 @@ const theme: Theme = {
     themeCream: "#fff5e8"
   },
   fonts: {
-    primary: "Roboto"
+    heading: "Montserrat",
+    body: "Roboto"
   },
   fontSizes: {
     mobile: {
@@ -44,16 +45,16 @@ const theme: Theme = {
   },
   text: {
     default: {
-      fontFamily: "primary",
+      fontFamily: "body",
       fontSize: ["mobile.text", "desktop.text"],
       fontWeight: 400
     },
     heading: {
-      fontFamily: "primary",
+      fontFamily: "heading",
       fontWeight: 700
     },
     paragraph: {
-      fontFamily: "primary",
+      fontFamily: "body",
       fontWeight: 400,
       fontSize: ["mobile.paragraph", "desktop.paragraph"]
     }
@@ -94,7 +95,7 @@ const theme: Theme = {
     },
     underlineOut: {
       py: 1,
-      fontFamily: "primary",
+      fontFamily: "body",
       fontSize: ["desktop.link"],
       fontWeight: 500,
       cursor: "pointer",
@@ -120,7 +121,7 @@ const theme: Theme = {
     },
     underlineLeftToRight: {
       py: 1,
-      fontFamily: "primary",
+      fontFamily: "body",
       fontSize: ["desktop.link"],
       fontWeight: 500,
       cursor: "pointer",

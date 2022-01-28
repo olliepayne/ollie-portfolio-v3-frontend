@@ -19,7 +19,7 @@ const DesktopNav = () => {
             sx={{
               variant: "links.underlineLeftToRight",
               textDecoration: "none",
-              fontFamily: "primary",
+              fontFamily: "body",
               fontSize: "2.369rem",
               fontWeight: 500,
               cursor: "pointer"
