@@ -2,7 +2,7 @@
 import { Container, Box, Heading, Grid } from "theme-ui"
 import { NextPage } from "next"
 
-import HeroImage from "components/images/HeroImage"
+import HeroSection from "components/layout/HeroSection"
 import ResourceCard, { IResourceCard } from "components/cards/ResourceCard"
 
 // Data
@@ -43,9 +43,7 @@ const otherProjects: IResourceCard[] = [
 const OtherProjectsPage: NextPage = () => {
   return (
     <main>
-      <section>
-        <HeroImage src="/images/climbing-1.png" alt="" />
-      </section>
+      <HeroSection></HeroSection>
 
       <section
         sx={{

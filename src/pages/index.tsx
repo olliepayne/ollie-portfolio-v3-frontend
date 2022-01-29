@@ -13,15 +13,15 @@ import { NextPage } from "next"
 import Image from "next/image"
 
 import ScrollProgress from "components/ScrollProgress"
-import HeroImage from "components/images/HeroImage"
+import HeroSection from "components/layout/HeroSection"
 import FakeRegion from "components/layout/FakeRegion"
 import RegionHeading from "components/text/RegionHeading"
+import AboutMeBlock from "components/homepage/AboutMeBlock"
 import Timeline from "components/timeline/Timeline"
+import ExternalLink from "components/links/ExternalLink"
 
 import { ITimelineEvent } from "components/timeline/TimelineEvent"
 import { IMyLink } from "config/myTypes"
-import ExternalLink from "components/links/ExternalLink"
-import AboutMeBlock from "components/homepage/AboutMeBlock"
 
 // Data
 const educationTimelineNodes: ITimelineEvent[] = [
@@ -117,30 +117,33 @@ const Homepage: NextPage = (props) => {
         }}
       /> */}
 
-      <section>
-        <Box
+      <HeroSection>
+        <Container
+          variant="medium"
           sx={{
-            height: "600px",
-            background: "linear-gradient(360deg, #FFFFFF, #ff94b1)",
-            // background: "linear-gradient(45deg, #4f74db, #ff94b1)"
+            height: "100%",
+            pt: 6
           }}
         >
-          <Container
+          <Flex
             sx={{
-              width: "100%",
               height: "100%",
-              // backdropFilter: "blur(20px)"
+              alignItems: "center"
             }}
           >
-            <Flex
+            <Heading
+              as="h2"
+              variant="styles.h2"
               sx={{
-                height: "100%",
-                alignItems: "center"
+                color: "white"
+                // textDecoration: "underline"
               }}
-            ></Flex>
-          </Container>
-        </Box>
-      </section>
+            >
+              Hi, i'm Ollie.
+            </Heading>
+          </Flex>
+        </Container>
+      </HeroSection>
 
       {/* First / Home content */}
       <section
