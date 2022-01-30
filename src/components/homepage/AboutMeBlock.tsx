@@ -89,6 +89,7 @@ const AboutMeBlock = ({
 
       <Paragraph
         sx={{
+          flex: "1 1",
           position: "relative",
           zIndex: 1
         }}

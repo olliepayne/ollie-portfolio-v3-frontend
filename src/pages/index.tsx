@@ -131,16 +131,17 @@ const Homepage: NextPage = (props) => {
               alignItems: "center"
             }}
           >
-            <Heading
-              as="h2"
-              variant="styles.h2"
+            <Card
               sx={{
-                color: "white"
-                // textDecoration: "underline"
+                px: 4,
+                py: 3,
+                bg: "white",
+                borderRadius: "4px",
+                boxShadow: "0 2px 8px rgb(0 0 0 / 0.1)"
               }}
             >
-              Hi, i'm Ollie.
-            </Heading>
+              <Heading>aefae</Heading>
+            </Card>
           </Flex>
         </Container>
       </HeroSection>
